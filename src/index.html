@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./app/css/main.min.css">
+    <title>ProfMasters</title>
+</head>
+<body class="home-page">
+    <!-- header -->
+    <header class="home-page__header header">
+        <div class="header__container container">
+            <div class="header__menu menu">
+                <a href="/" class="menu__logo">
+                    <img class="menu__logo-img" src="./app/img/logo.svg" alt="Логотип ProfMasters">
+                </a>
+                <nav class="menu__list-wrapper">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                Преимущества
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                <span class="menu__link-item">
+                                    Услуги
+                                </span>
+                                <span class="arrow-list">
+                                    <svg>
+                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                            <ul class="menu__list-inner list-inner">
+                                <li class="list-inner__item">
+                                    <a class="list-inner__link" href="#">
+                                        Услуг1
+                                    </a>
+                                </li>
+                                <li class="list-inner__item">
+                                    <a class="list-inner__link" href="#">
+                                        Услуг2
+                                    </a>
+                                </li>
+                                <li class="list-inner__item">
+                                    <a class="list-inner__link" href="#">
+                                        Услуг3
+                                    </a>
+                                </li>
+                                <li class="list-inner__item">
+                                    <a class="list-inner__link" href="#">
+                                        Услуг4
+                                    </a>
+                                </li>
+                                <li class="list-inner__item">
+                                    <a class="list-inner__link" href="#">
+                                        Услуг5
+                                    </a>
+                                </li>
+                                <li class="list-inner__item">
+                                    <a class="list-inner__link" href="#">
+                                        Услуг6
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                Партфолио    
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                Цены
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                О нас
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="menu__toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <!-- burger menu -->
+            <div class="header__burger menu-mobile">
+                <div class="menu-mobile__wrap">
+                    <nav class="menu-mobile__menu">
+                        <ul class="menu-list">
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <span class="link-item">
+                                        Каталог товаров 
+                                    </span>
+                                    <span class="arrow-list-mob">
+                                        <svg>
+                                            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul class="menu-list__inner">
+                                    <li class="menu-item">
+                                        <a href="#" target="_blank">
+                                            Услуг1
+                                        </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" target="_blank">
+                                            Услуг2
+                                        </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" target="_blank">
+                                            Услуг3
+                                        </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" target="_blank">
+                                            Услуг4
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a href="./main.html" class="menu-link">
+                                    <span class="link-item">
+                                    Услуги
+                                    </span>
+                                    <span class="arrow-list-mob">
+                                    <svg>
+                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                    </span>
+                                </a>
+                                <ul class="menu-list__inner">
+                                    <li class="menu-item">
+                                        <a href="#" target="_blank">
+                                            Услуг1
+                                        </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" target="_blank">
+                                            Услуг2
+                                        </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" target="_blank">
+                                            Услуг3
+                                        </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" target="_blank">
+                                            Услуг4
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item parent">
+                                <a href="#" class="menu-link">
+                                    <span class="link-item">
+                                        О компании
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="./main-price.html" class="menu-link">
+                                    <span class="link-item">
+                                        Портфолио
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <span class="link-item">
+                                        Вопрос-ответ
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="./contact.html" class="menu-link">
+                                    <span class="link-item">
+                                        Контакты
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="list-svg">
+                        <li class="list-svg__item">
+                            <a href="#" class="list-svg__item-link">
+                                <svg class="list-svg__item-svg">
+                                    <use xlink:href="/app/img/icons/icons.svg#Telegram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="list-svg__item">
+                        <a href="#" class="list-svg__item-link">
+                                <svg class="list-svg__item-svg">
+                                    <use xlink:href="/app/img/icons/icons.svg#WhatsApp"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="list-svg__item">
+                            <a href="#" class="list-svg__item-link">
+                                <svg class="list-svg__item-svg">
+                                    <use xlink:href="/app/img/icons/icons.svg#Mail"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="phone">
+                        <a href="tel:8 (918) 623 91 52" class="phone-link">
+                            8 (918) 623 91 52
+                        </a>
+                    </div>
+                    <div class="address">
+                        <span class="address-icon">
+                            <svg class="list-svg__item-svg">
+                            <use xlink:href="/app/img/svg_sprite.svg#map"></use>
+                            </svg>
+                        </span>
+                        <span class="address-text">
+                            г. Новороссийск, ул. Энгельса, 7, офис 103.
+                        </span>
+                    </div>
+                    <div class="button" data-open="form-callback">
+                        Оставить заявку
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- hero -->
+    <section class="home-page__hero hero">
+        <div class="hero__container container">
+            <div class="hero__content">
+                <h1 class="hero__title header_1">
+                    РЕМОНТ И ОТДЕЛКА КВАРТИР
+                </h1>
+                <p class="hero__subtitle">
+                    под ключ в Новороссийске
+                </p>
+                <div class="hero__btn-wrapper">
+                <button class="hero__btn" data-open="form-callback">
+                    Заказать басплатный расчет
+                </button>
+                    <img class="hero__img-btn" src="../app/img/hero/btn-hero.svg" alt="Кнопка">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="home-page__advantages advantages">
+        <div class="advantages__container container">
+            <p>
+                Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные тексты. Составитель коварных вдали бросил диких встретил журчит заголовок залетают даже, власти ты собрал вопрос ручеек безорфографичный океана всеми рукопись осталось.
+            </p>
+            <p>
+                Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные тексты. Составитель коварных вдали бросил диких встретил журчит заголовок залетают даже, власти ты собрал вопрос ручеек безорфографичный океана всеми рукопись осталось.
+            </p>
+            <p>
+                Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные тексты. Составитель коварных вдали бросил диких встретил журчит заголовок залетают даже, власти ты собрал вопрос ручеек безорфографичный океана всеми рукопись осталось.
+            </p>
+            <p>
+                Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные тексты. Составитель коварных вдали бросил диких встретил журчит заголовок залетают даже, власти ты собрал вопрос ручеек безорфографичный океана всеми рукопись осталось.
+            </p>
+        </div>
+    </section>
+  
+  <!-- slider -->
+  <!-- <section class="home-page__slider slider-wrapper">
+    <div class="slider-wrapper__container container">
+      <h2 class="slider-wrapper__title header_2">
+        Примеры работ
+      </h2>
+      <div class="slider-wrapper__slider slider">
+        <div class="slider__slide slide-content">
+          <div class="slide-content__wrapper">
+            <div class="slide-content__top-content">
+              <div class="slide-content__slider slider-left">
+                <div class="slider-left__top">
+                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
+                   <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </a>
+                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
+                   <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </a>
+                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
+                   <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </a>
+                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
+                   <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </a>
+                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
+                   <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </a>
+                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
+                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                   </a>
+                   <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
+                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                   </a>
+                </div>
+                <div class="slider-left__bottom">
+                  <div class="slider-left__slide-item">
+                     <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </div>
+                  <div class="slider-left__slide-item">
+                     <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </div>
+                  <div class="slider-left__slide-item">
+                     <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </div>
+                  <div class="slider-left__slide-item">
+                     <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </div>
+                  <div class="slider-left__slide-item">
+                     <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </div>
+                  <div class="slider-left__slide-item">
+                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                 </div>
+                 <div class="slider-left__slide-item">
+                  <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+               </div>
+                </div>
+              </div>
+              <div class="slide-content__descr">
+                <ul class="slide-content__list">
+                  <li class="slide-content__item">
+                    <h3 class="slide-content__title">
+                      Дата монтажа:
+                    </h3>
+                    <p class="slide-content__text">
+                      06.10.2022
+                    </p>
+                  </li>
+                  <li class="slide-content__item">
+                    <h3 class="slide-content__title">
+                      Место:
+                    </h3>
+                    <p class="slide-content__text">
+                      Город Новороссийск, Ул.Анисовая
+                    </p>
+                  </li>
+                  <li class="slide-content__item">
+                    <h3 class="slide-content__title">
+                      Монтаж:
+                    </h3>
+                    <p class="slide-content__text">
+                      Астра 5
+                    </p>
+                  </li>
+                  <li class="slide-content__item">
+                    <h3 class="slide-content__title">
+                      Стоимость оборудования:
+                    </h3>
+                    <p class="slide-content__text">
+                      145 000 ₽
+                    </p>
+                  </li>
+                  <li class="slide-content__item">
+                    <h3 class="slide-content__title">
+                      Срок изготовления изделия:
+                    </h3>
+                    <p class="slide-content__text">
+                      до 14 дней
+                    </p>
+                  </li>
+                  <li class="slide-content__item">
+                    <h3 class="slide-content__title">
+                      Оценка земельно-монтажных работ:
+                    </h3>
+                    <p class="slide-content__text">
+                      80 000 ₽
+                    </p>
+                  </li>
+                  <li class="slide-content__item">
+                    <h3 class="slide-content__title">
+                      Доставка изделия до объекта:
+                    </h3>
+                    <p class="slide-content__text">
+                      В подарок
+                    </p>
+                  </li>
+                  <li class="slide-content__item">
+                    <h3 class="slide-content__title">
+                      Земельно-монтажные работы:
+                    </h3>
+                    <p class="slide-content__text">
+                      1 день
+                    </p>
+                  </li>
+                </ul>
+                <button class="slide-content__btn button" data-open="form-callback">
+                  <span>
+                    Рассчитать проект
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div class="slide-content__btn-wrapper">
+                <button class="slide-content__btn-slide button-invert">
+                  Смотреть все работы
+                </button>
+                <div class="slide-content__arrow-wrapper">
+                  <span class="main-arrow-left arrow left slick-arrow"><svg><use xlink:href="/app/img//icons/icons.svg#arrow-slider"></use></svg></span>
+                  <span class="main-arrow-right arrow right slick-arrow"><svg><use xlink:href="/app/img//icons/icons.svg#arrow-slider"></use></svg></span>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider__slide slide-content">
+          <div class="slide-content__wrapper">
+            <div class="slide-content__top-content">
+              <div class="slide-content__slider slider-left">
+                <div class="slider-left__top">
+                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
+                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </a>
+                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
+                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </a>
+                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
+                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </a>
+                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
+                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </a>
+                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
+                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </a>
+                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
+                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </a>
+                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
+                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </a>
+                </div>
+                <div class="slider-left__bottom">
+                  <div class="slider-left__slide-item">
+                      <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </div>
+                  <div class="slider-left__slide-item">
+                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </div>
+                  <div class="slider-left__slide-item">
+                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </div>
+                  <div class="slider-left__slide-item">
+                      <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </div>
+                  <div class="slider-left__slide-item">
+                      <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </div>
+                  <div class="slider-left__slide-item">
+                      <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </div>
+                  <div class="slider-left__slide-item">
+                      <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </div>
+                </div>
+              </div>
+              <div class="slide-content__descr">
+                <ul class="slide-content__list">
+                  <li class="slide-content__item">
+                    <h3 class="slide-content__title">
+                      Дата монтажа:
+                    </h3>
+                    <p class="slide-content__text">
+                      06.10.2022
+                    </p>
+                  </li>
+                  <li class="slide-content__item">
+                    <h3 class="slide-content__title">
+                      Место:
+                    </h3>
+                    <p class="slide-content__text">
+                      Город Новороссийск, Ул.Анисовая
+                    </p>
+                  </li>
+                  <li class="slide-content__item">
+                    <h3 class="slide-content__title">
+                      Монтаж:
+                    </h3>
+                    <p class="slide-content__text">
+                      Астра 5
+                    </p>
+                  </li>
+                  <li class="slide-content__item">
+                    <h3 class="slide-content__title">
+                      Стоимость оборудования:
+                    </h3>
+                    <p class="slide-content__text">
+                      145 000 ₽
+                    </p>
+                  </li>
+                  <li class="slide-content__item">
+                    <h3 class="slide-content__title">
+                      Срок изготовления изделия:
+                    </h3>
+                    <p class="slide-content__text">
+                      до 14 дней
+                    </p>
+                  </li>
+                  <li class="slide-content__item">
+                    <h3 class="slide-content__title">
+                      Оценка земельно-монтажных работ:
+                    </h3>
+                    <p class="slide-content__text">
+                      80 000 ₽
+                    </p>
+                  </li>
+                  <li class="slide-content__item">
+                    <h3 class="slide-content__title">
+                      Доставка изделия до объекта:
+                    </h3>
+                    <p class="slide-content__text">
+                      В подарок
+                    </p>
+                  </li>
+                  <li class="slide-content__item">
+                    <h3 class="slide-content__title">
+                      Земельно-монтажные работы:
+                    </h3>
+                    <p class="slide-content__text">
+                      1 день
+                    </p>
+                  </li>
+                </ul>
+                <button class="slide-content__btn button" data-open="form-callback">
+                  <span>
+                    Рассчитать проект
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div class="slide-content__btn-wrapper">
+                <button class="slide-content__btn-slide button-invert">
+                  Смотреть все работы
+                </button>
+                <div class="slide-content__arrow-wrapper">
+                  <span class="main-arrow-left arrow left slick-arrow"><svg><use xlink:href="/app/img//icons/icons.svg#arrow-slider"></use></svg></span>
+                  <span class="main-arrow-right arrow right slick-arrow"><svg><use xlink:href="/app/img//icons/icons.svg#arrow-slider"></use></svg></span>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider__slide slide-content">
+          <div class="slide-content__wrapper">
+            <div class="slide-content__top-content">
+              <div class="slide-content__slider slider-left">
+                <div class="slider-left__top">
+                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
+                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </a>
+                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
+                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </a>
+                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
+                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </a>
+                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
+                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </a>
+                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
+                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </a>
+                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
+                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </a>
+                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
+                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </a>
+                </div>
+                <div class="slider-left__bottom">
+                  <div class="slider-left__slide-item">
+                      <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </div>
+                  <div class="slider-left__slide-item">
+                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </div>
+                  <div class="slider-left__slide-item">
+                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </div>
+                  <div class="slider-left__slide-item">
+                      <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </div>
+                  <div class="slider-left__slide-item">
+                      <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </div>
+                  <div class="slider-left__slide-item">
+                      <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </div>
+                  <div class="slider-left__slide-item">
+                      <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
+                  </div>
+                </div>
+              </div>
+              <div class="slide-content__descr">
+                <ul class="slide-content__list">
+                  <li class="slide-content__item">
+                    <h3 class="slide-content__title">
+                      Дата монтажа:
+                    </h3>
+                    <p class="slide-content__text">
+                      06.10.2022
+                    </p>
+                  </li>
+                  <li class="slide-content__item">
+                    <h3 class="slide-content__title">
+                      Место:
+                    </h3>
+                    <p class="slide-content__text">
+                      Город Новороссийск, Ул.Анисовая
+                    </p>
+                  </li>
+                  <li class="slide-content__item">
+                    <h3 class="slide-content__title">
+                      Монтаж:
+                    </h3>
+                    <p class="slide-content__text">
+                      Астра 5
+                    </p>
+                  </li>
+                  <li class="slide-content__item">
+                    <h3 class="slide-content__title">
+                      Стоимость оборудования:
+                    </h3>
+                    <p class="slide-content__text">
+                      145 000 ₽
+                    </p>
+                  </li>
+                  <li class="slide-content__item">
+                    <h3 class="slide-content__title">
+                      Срок изготовления изделия:
+                    </h3>
+                    <p class="slide-content__text">
+                      до 14 дней
+                    </p>
+                  </li>
+                  <li class="slide-content__item">
+                    <h3 class="slide-content__title">
+                      Оценка земельно-монтажных работ:
+                    </h3>
+                    <p class="slide-content__text">
+                      80 000 ₽
+                    </p>
+                  </li>
+                  <li class="slide-content__item">
+                    <h3 class="slide-content__title">
+                      Доставка изделия до объекта:
+                    </h3>
+                    <p class="slide-content__text">
+                      В подарок
+                    </p>
+                  </li>
+                  <li class="slide-content__item">
+                    <h3 class="slide-content__title">
+                      Земельно-монтажные работы:
+                    </h3>
+                    <p class="slide-content__text">
+                      1 день
+                    </p>
+                  </li>
+                </ul>
+                <button class="slide-content__btn button" data-open="form-callback">
+                  <span>
+                    Рассчитать проект
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div class="slide-content__btn-wrapper">
+                <button class="slide-content__btn-slide button-invert">
+                  Смотреть все работы
+                </button>
+                <div class="slide-content__arrow-wrapper">
+                  <span class="main-arrow-left arrow left slick-arrow"><svg><use xlink:href="/app/img//icons/icons.svg#arrow-slider"></use></svg></span>
+                  <span class="main-arrow-right arrow right slick-arrow"><svg><use xlink:href="/app/img//icons/icons.svg#arrow-slider"></use></svg></span>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- footer -->
+  <!-- <footer class="home-page__footer footer">
+    <div class="footer__container container">
+      <div class="footer__content">
+        <div class="footer__lists">
+          <div class="footer__list-left list-reset">
+            <h3 class="footer__title">
+              Меню
+            </h3>
+            <ul class="footer__content-list">
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  Каталог товаров
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  Услуги
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  О компании
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  Портфолио
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  Вопрос-ответ
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list-middle list-reset">
+            <h3 class="footer__title">
+              Каталог
+            </h3>
+            <ul class="footer__content-list">
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  Септики для дома и&nbsp;дачи
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  Септики для коммерции
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  Дренажные системы
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  Компрессоры
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  Комплектующие
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  Акционные товары
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list-right list-reset">
+            <h3 class="footer__title">
+              Контакты
+            </h3>
+            <ul class="footer__content-list last-list">
+              <li class="footer__list-item link-phone">
+                <a class="link-phone__number" href="tel:+79184399702">
+                  <svg class="link-phone__svg">
+                    <use xlink:href="/app/img/icons/icons.svg#Phone"></use>
+                  </svg>
+                  +7 (918) 439-97-02
+                </a>
+                <span class="link-phone__item">
+                  Ежедневно с&nbsp;9:00 до&nbsp;19:00
+                </span>
+              </li>
+              <li class="footer__list-item">
+                <ul class="footer__social-link">
+                  <li class="footer__social-svg">
+                    <a href="#" target="_blank">
+                      <svg class="footer__svg footer__svg-tg">
+                        <use xlink:href="/app/img/icons/icons.svg#Mail"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="footer__social-svg">
+                    <a href="#" class="list-svg__item-link">
+                      <svg class="footer__svg footer__svg-vk">
+                        <use xlink:href="/app/img/icons/icons.svg#Telegram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="footer__social-svg">
+                    <a href="#" target="_blank">
+                      <svg class="footer__svg footer__svg-whts">
+                        <use xlink:href="/app/img/icons/icons.svg#WhatsApp"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer__list-item address">
+                г. Новороссийск Новороссийское шоссе, 45
+              </li>
+              <li class="footer__list-item requisites">
+                <ul class="requisites__list">
+                  <li class="requisites__list-item">
+                    ИП&nbsp;Шепель Олег Анатольевич
+                  </li>
+                  <li class="requisites__list-item">
+                    ИНН: 233703874242
+                  </li>
+                  <li class="requisites__list-item">
+                    ОГРН: 304233715600188
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer> -->
+  <!-- copyright -->
+  <!-- <section class="home-page__copyright copyright">
+    <div class="copyright__container container">
+      <ul class="copyright__list">
+        <li class="copyright__item">
+          <a href="#" class="copyright__link">
+            Пользовательское соглашение
+          </a>
+        </li>
+        <li class="copyright__item">
+          Copyright © 2012–2022. Все права защищены
+        </li>
+        <li class="copyright__item">
+          <a href="https://web2.agency/" class="copyright__link">
+            <svg class="copyright__svg" width="40" height="17" viewBox="0 0 40 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.8328 1.45968L10.603 15.8291L10.8002 16.9847H7.90292L8.10011 15.8291L6.64391 6.78168L5.23322 15.8291L5.43041 16.9847H2.56352L2.76071 15.8291L0.4854 1.49009L0 0.0151367H2.62419L2.47251 0.729806L3.98938 11.1001L5.50626 0.729806L5.32423 0.0151367H7.97876L7.79674 0.729806L9.32878 11.1001L10.8457 0.729806L10.6636 0.0151367H13.3182L12.8328 1.45968Z" fill="url(#paint0_linear_281_4371)"/>
+              <path d="M21.5549 16.9848H15.1992L15.4723 15.9356V1.03399L15.1992 0H21.5549L21.9341 2.34168L20.842 2.09839H17.8082L17.5655 2.34168V7.1619L17.8082 7.40519H18.6577L19.7043 7.13148V9.79249L18.6577 9.51878H17.8082L17.5655 9.79249V14.5975L17.8082 14.8408H20.842L21.9341 14.5975L21.5549 16.9848Z" fill="url(#paint1_linear_281_4371)"/>
+              <path d="M24.1949 1.03399L23.9219 0H29.4736L30.5506 1.04919V7.42039L29.4585 8.46959L30.5506 9.5492V15.9356L29.4736 16.9848H23.937L24.2101 15.9356V1.03399H24.1949ZM26.3185 2.34168V7.1619L26.5612 7.40519H28.1843L28.427 7.1619V2.34168L28.1843 2.09839H26.5612L26.3185 2.34168ZM28.4422 9.79249L28.1995 9.5492H26.5764L26.3337 9.79249V14.5975L26.5764 14.8408H28.1843L28.427 14.5975V9.79249H28.4422Z" fill="url(#paint2_linear_281_4371)"/>
+              <path d="M39.9994 12.7424L39.7264 13.7764V17H33.3707V8.48479L34.4173 7.4356H37.3601L37.6028 7.19231V2.3873L37.3601 2.14401H35.7067L35.464 2.3873V3.20841L35.7522 4.2424H33.0977L33.3707 3.20841V1.07961L34.4173 0H38.6494L39.7264 1.07961V8.5L38.6494 9.57961H35.7067L35.464 9.8229V14.5975L35.7067 14.8408H37.3601L37.6028 14.5975V13.7764L37.3297 12.7424H39.9994Z" fill="url(#paint3_linear_281_4371)"/>
+              <mask id="mask0_281_4371" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="17">
+              <path d="M12.8328 1.45968L10.603 15.8291L10.8002 16.9847H7.90292L8.10011 15.8291L6.64391 6.78168L5.23322 15.8291L5.43041 16.9847H2.56352L2.76071 15.8291L0.4854 1.49009L0 0.0151367H2.62419L2.47251 0.729806L3.98938 11.1001L5.50626 0.729806L5.32423 0.0151367H7.97876L7.79674 0.729806L9.32878 11.1001L10.8457 0.729806L10.6636 0.0151367H13.3182L12.8328 1.45968Z" fill="url(#paint4_linear_281_4371)"/>
+              <path d="M21.5549 16.9848H15.1992L15.4723 15.9356V1.03399L15.1992 0H21.5549L21.9341 2.34168L20.842 2.09839H17.8082L17.5655 2.34168V7.1619L17.8082 7.40519H18.6577L19.7043 7.13148V9.79249L18.6577 9.51878H17.8082L17.5655 9.79249V14.5975L17.8082 14.8408H20.842L21.9341 14.5975L21.5549 16.9848Z" fill="url(#paint5_linear_281_4371)"/>
+              <path d="M24.1949 1.03399L23.9219 0H29.4736L30.5506 1.04919V7.42039L29.4585 8.46959L30.5506 9.5492V15.9356L29.4736 16.9848H23.937L24.2101 15.9356V1.03399H24.1949ZM26.3185 2.34168V7.1619L26.5612 7.40519H28.1843L28.427 7.1619V2.34168L28.1843 2.09839H26.5612L26.3185 2.34168ZM28.4422 9.79249L28.1995 9.5492H26.5764L26.3337 9.79249V14.5975L26.5764 14.8408H28.1843L28.427 14.5975V9.79249H28.4422Z" fill="url(#paint6_linear_281_4371)"/>
+              <path d="M39.9994 12.7424L39.7264 13.7764V17H33.3707V8.48479L34.4173 7.4356H37.3601L37.6028 7.19231V2.3873L37.3601 2.14401H35.7067L35.464 2.3873V3.20841L35.7522 4.2424H33.0977L33.3707 3.20841V1.07961L34.4173 0H38.6494L39.7264 1.07961V8.5L38.6494 9.57961H35.7067L35.464 9.8229V14.5975L35.7067 14.8408H37.3601L37.6028 14.5975V13.7764L37.3297 12.7424H39.9994Z" fill="url(#paint7_linear_281_4371)"/>
+              </mask>
+              <g mask="url(#mask0_281_4371)">
+              <rect opacity="0.15" x="-89" y="-69" width="1738" height="798" fill="url(#paint8_linear_281_4371)"/>
+              </g>
+              <defs>
+              <linearGradient id="paint0_linear_281_4371" x1="0" y1="0.0151367" x2="16.8448" y2="4.95233" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#63C018"/>
+              <stop offset="1" stop-color="#068B30"/>
+              </linearGradient>
+              <linearGradient id="paint1_linear_281_4371" x1="15.1992" y1="0" x2="24.2509" y2="1.34042" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#63C018"/>
+              <stop offset="1" stop-color="#068B30"/>
+              </linearGradient>
+              <linearGradient id="paint2_linear_281_4371" x1="23.9219" y1="0" x2="32.8368" y2="1.29936" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#63C018"/>
+              <stop offset="1" stop-color="#068B30"/>
+              </linearGradient>
+              <linearGradient id="paint3_linear_281_4371" x1="33.0977" y1="0" x2="42.3639" y2="1.40494" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#63C018"/>
+              <stop offset="1" stop-color="#068B30"/>
+              </linearGradient>
+              <linearGradient id="paint4_linear_281_4371" x1="0.590201" y1="2.79312" x2="19.1289" y2="17.0892" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#00D4D1"/>
+              <stop offset="1" stop-color="#00B9D4"/>
+              </linearGradient>
+              <linearGradient id="paint5_linear_281_4371" x1="4.49173" y1="-2.26603" x2="23.0305" y2="12.0301" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#00D4D1"/>
+              <stop offset="1" stop-color="#00B9D4"/>
+              </linearGradient>
+              <linearGradient id="paint6_linear_281_4371" x1="7.61017" y1="-6.30911" x2="26.1489" y2="7.98696" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#00D4D1"/>
+              <stop offset="1" stop-color="#00B9D4"/>
+              </linearGradient>
+              <linearGradient id="paint7_linear_281_4371" x1="11.0934" y1="-10.8278" x2="29.6322" y2="3.46824" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#00D4D1"/>
+              <stop offset="1" stop-color="#00B9D4"/>
+              </linearGradient>
+              <linearGradient id="paint8_linear_281_4371" x1="-89" y1="-69" x2="1347.64" y2="1099.51" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#63C018"/>
+              <stop offset="1" stop-color="#068B30"/>
+              </linearGradient>
+              </defs>
+            </svg>
+            <span class="copyright__link-item">
+              Создание сайтов
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section> -->
+  <!-- overlay -->
+    <div class="home-page__overlay overlay" >
+        <div class="overlay__wrapper">
+            <div class="overlay__bg"></div>
+            <div class="overlay__content">
+                <span class="overlay__close"></span>
+                <!-- form-callback -->
+                <form action="/" method="post" class="form form-callback novalid">
+                    <input type="hidden" name="count" value="0">
+                        <h3 class="header_2">
+                            Заказать звонок
+                        </h3>
+                        <div class="form-item">
+                            <input type="text" name="name" placeholder="имя" >
+                        </div>
+                        <div class="form-item">
+                            <input type="tel" name="phone" placeholder="телефон" >
+                        </div>
+                        <button class="button-invert">
+                            Отправить
+                        </button>
+                        <label class="form-note">
+                        <input type="checkbox" checked>
+                        <div class="custom-checkbox"></div>
+                        <div class="form-note-text">
+                            Нажимая на&nbsp;кнопку, я&nbsp;соглашаюсь с&nbsp;обработкой <a href="#">персональных данных</a>
+                        </div>
+                    </label>
+                </form>
+                <!-- form-success -->
+                <div class="form-success">
+                    <div class="header_2">Спасибо!</div>
+                    <div class="header_3">Ваши данные отправлены.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- scroll-top -->
+    <button class="scroll-top">
+        <svg>
+            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+        </svg>
+    </button>
+    <!-- scripts -->
+    <script src="/app/js/libs/jquery-3.3.1.min.js"></script>
+    <script src="/app/js/libs/slick.min.js"></script>
+    <script src="./app/js/main.min.js"></script>
+    <script src="/app/js/libs/lightgallery-all.min.js"></script>
+    <script src="/app/js/libs/functions.js"></script>
+ <!-- <script src="/app/js/libs/jquery.marquee.min.js"></script>-->
+</body>
+</html>

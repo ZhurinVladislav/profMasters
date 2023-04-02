@@ -1,0 +1,266 @@
+.header
+  position: absolute
+  z-index: 33
+  background-color: rgba(255, 255, 255, 0.6)
+  color: $color__2
+
+  &__container
+    padding-top: 4px
+    padding-bottom: 4px
+  
+  .menu
+    display: flex
+
+    +max(1148px)
+      .menu__toggle
+        margin-left: auto
+        position: relative
+        z-index: 30
+        display: block
+        width: 22px
+        height: 14px
+        cursor: pointer
+
+        span
+          display: block
+          width: 100%
+          height: 2px
+          border-radius: 1px
+          background-color: $color__3
+          position: absolute
+          transition: all 0.3s
+          transform: rotate(0) translate(0, 0)
+          &:nth-child(1)
+            top: 0
+            left: 0
+          &:nth-child(2)
+            top: 50%
+            left: 0
+            transform: translateY(-50%)
+            opacity: 1
+          &:nth-child(3)
+            bottom: 0
+            left: 0
+
+        &.active
+          span
+            &:nth-child(1)
+              transform: rotate(45deg) translate(-50%, -50%)
+              transform-origin: top left
+              left: 50%
+              top: 50%
+            &:nth-child(2)
+              left: 100%
+              transform: translateY(0)
+              opacity: 0
+            &:nth-child(3)
+              transform: rotate(-45deg) translate(-50%, 50%)
+              transform-origin: bottom left
+              left: 50%
+              bottom: 50%
+    
+    &__logo
+      display: inline-flex
+      flex-shrink: 0
+      margin-right: 20px
+      width: 10%
+
+    &__list-wrapper
+      display: flex
+      width: 90%
+
+      +phone
+        display: none
+
+    .menu__toggle
+      display: none
+
+      +phone
+        display: flex
+        margin: auto 0
+        margin-left: auto
+
+    &__list
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 100%
+      font-weight: 700
+      font-size: 18px
+      line-height: 22px
+
+      +small
+        font-size: 16px
+
+      > .menu__item
+          position: relative
+
+          +medium
+            margin-right: 9px
+
+          &:last-child
+            margin-right: 0
+
+          &:hover
+              > a
+                color: $color__3
+
+              ul
+                  display: block
+
+              .arrow-list
+                transition: transform 0.3s
+                transform: rotate(180deg)
+
+              .arrow-list
+                svg
+                  fill: $color__1
+
+          &.active
+              &__link
+                color: $color__3
+                  
+          > .menu__link-item
+              position: relative
+              z-index: 1
+              display: block
+              padding: 0 4px
+              text-transform: uppercase
+              transition: all 0.3s
+
+              &::after
+                content: ""
+                display: block
+                position: absolute
+                z-index: -1
+                left: 0
+                bottom: 2px
+                width: 100%
+                height: 2px
+                background: $color__3
+                opacity: 0
+                transition: all 0.3s
+
+      .arrow-list
+        position: absolute
+        display: inline-flex
+        width: 16px
+        height: 10px
+        margin-left: 5px
+        top: 40%
+        transition: all 0.3s
+
+        svg
+          fill: #fff
+
+      .list-inner
+          position: absolute
+          top: 100%
+          // top: 35px
+          left: 0
+          z-index: 0
+          display: none
+          padding: 14px 17px 20px 17px
+          // width: 210px
+          // width: 100%
+          width: 300px
+          background-color: rgba(255, 255, 255, 0.6)
+          font-size: 18px
+
+          > &__item
+              padding-top: 10px
+              padding-bottom: 10px
+              // margin-bottom: 12px
+              text-align: start
+
+              &:last-child
+                margin-bottom: 0
+                padding-bottom: 0
+
+              > a
+                  font-weight: 600
+                  font-size: 18px
+                  line-height: 120%
+                  transition: color .2s ease-in-out
+                  &:hover
+                    color: rgba($color__1, .5)
+                      // border-bottom: 2px solid $color__1
+
+              &.active
+                  a
+                    color: $color__2
+                    border-bottom: 1px solid $color__2
+
+          > &__item:not(:last-child)
+              border-radius: 2px
+              border-bottom: 2px solid $color__1
+
+
+.menu-mobile
+  height: 100%
+
+  .menu-list > .menu-item
+      position: relative
+      margin-right: 63px
+
+      +medium
+        margin-right: 36px
+
+      &:last-child
+        margin-right: 0
+
+      &:hover
+          > a
+            color: $color__3
+
+          ul
+              display: block
+
+          .arrow-list
+            transform: rotate(180deg)
+
+          .arrow-list
+            svg
+              fill: $color__3
+
+      &.active
+          a
+            color: $color__3
+            // &::after
+            //     opacity: 1
+                
+      > a
+          position: relative
+          z-index: 1
+          display: block
+          font-weight: 700
+          font-size: 16px
+          line-height: 22px
+          padding: 0 4px
+          color: #fff
+          text-transform: uppercase
+          transition: all 0.3s
+
+          &::after
+              content: ""
+              display: block
+              position: absolute
+              z-index: -1
+              left: 0
+              bottom: 2px
+              width: 100%
+              height: 2px
+              background: $color__3
+              opacity: 0
+              transition: all 0.3s
+
+          .arrow-list
+              display: inline-flex
+              width: 11px
+              height: 11px
+              top: 29%
+              left: 69px
+              // transform: rotate(180deg)
+              transition: all 0.3s
+              svg
+                  fill: #fff
