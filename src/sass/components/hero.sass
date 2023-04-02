@@ -12,8 +12,15 @@
   background-size: cover
   overflow: hidden
 
-  +max(1148px)
-    min-height: 76vh
+  &__content
+    display: flex
+    flex-direction: column
+
+    +phone
+      align-items: center
+      text-align: center
+
+
 
   &__title
     margin-bottom: 10px
@@ -23,16 +30,9 @@
     line-height: 77px
     text-transform: uppercase
 
-    +max(1148px)
-      margin-bottom: 71px
-
-    +medium
-      font-size: 37px
-
     +phone
-      margin-bottom: 19px
-      text-align: center
-      font-size: 28px
+      font-size: 46px
+      line-height: 52px
 
   &__subtitle
     @include textReset
@@ -43,6 +43,8 @@
 
   &__btn-wrapper
     position: relative
+    display: flex
+    max-width: 960px
 
   &__btn
     font-weight: 700
@@ -54,4 +56,10 @@
     top: -48px
     left: -69px
     z-index: -1
+
+  &__logo
+    margin-left: auto
+
+    +phone
+      display: none
 

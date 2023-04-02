@@ -3167,9 +3167,14 @@ html.overlay-active {
   background-size: cover;
   overflow: hidden;
 }
-@media (max-width: 1148px) {
-  .hero {
-    min-height: 76vh;
+.hero__content {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 767px) {
+  .hero__content {
+    align-items: center;
+    text-align: center;
   }
 }
 .hero__title {
@@ -3180,21 +3185,10 @@ html.overlay-active {
   line-height: 77px;
   text-transform: uppercase;
 }
-@media (max-width: 1148px) {
-  .hero__title {
-    margin-bottom: 71px;
-  }
-}
-@media (max-width: 1199px) {
-  .hero__title {
-    font-size: 37px;
-  }
-}
 @media (max-width: 767px) {
   .hero__title {
-    margin-bottom: 19px;
-    text-align: center;
-    font-size: 28px;
+    font-size: 46px;
+    line-height: 52px;
   }
 }
 .hero__subtitle {
@@ -3207,6 +3201,8 @@ html.overlay-active {
 }
 .hero__btn-wrapper {
   position: relative;
+  display: flex;
+  max-width: 960px;
 }
 .hero__btn {
   font-weight: 700;
@@ -3218,4 +3214,12 @@ html.overlay-active {
   top: -48px;
   left: -69px;
   z-index: -1;
+}
+.hero__logo {
+  margin-left: auto;
+}
+@media (max-width: 767px) {
+  .hero__logo {
+    display: none;
+  }
 }
