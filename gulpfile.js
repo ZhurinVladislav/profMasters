@@ -15,7 +15,8 @@ global.app = {
 }
 
 // Импорт задач
-import { copy } from "./gulp/tasks/copy.js";
+import { copyScripts } from "./gulp/tasks/copy.js";
+import { copyStyles } from "./gulp/tasks/copy.js";
 import { reset } from "./gulp/tasks/reset.js";
 import { html } from "./gulp/tasks/html.js";
 import { server } from "./gulp/tasks/server.js";
@@ -28,7 +29,9 @@ import { zip } from "./gulp/tasks/zip.js";
 
 // Наблюдатель за изменениями в файлах
 function watcher() {
-  gulp.watch(path.watch.files, copy);
+  // gulp.watch(path.watch.files, copy);
+  gulp.watch(path.watch.filesScripts, copyScripts);
+  gulp.watch(path.watch.filesStyles, copyStyles);
   gulp.watch(path.watch.html, html);
   gulp.watch(path.watch.sass, sass);
   gulp.watch(path.watch.js, js);
@@ -40,7 +43,7 @@ function watcher() {
 // Последовательная обработка шрифтов
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
-const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, sass, js, images, svgSprive));
+const mainTasks = gulp.series(fonts, gulp.parallel(copyScripts, copyStyles, html, sass, js, images, svgSprive));
 
 // Построение сценариев выполнения задач
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));

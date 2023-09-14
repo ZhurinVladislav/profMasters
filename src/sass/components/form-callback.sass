@@ -1,50 +1,111 @@
-.form-callback
-  margin:  0
-  overflow-y: auto
-  max-width: 100%
-  width: 520px
-  padding: 50px 40px
-  border-radius: 10px
-  background: $color__4
-  display: none
+.form-mod
+  display: flex
+  flex-direction: column
 
-  .form
-    width: 100%
+  .wrap-input
+    margin-bottom: 20px
 
-  &.active
-    display: block
-
-  .header_2
-    color: $color__1
-    margin-bottom: 25px
-
-  .form-item:not(last-child)
-    margin-bottom: 25px
-
-  .button-invert
-    max-width: 280px
-    background-color: $color__1
-    color: $color__3
-    border: 2px solid $color__3
-    transition: border .2s ease-in-out, color .2s ease-in-out, background-color .2s ease-in-out
-
-    +medium
+    &__input
       width: 100%
-      margin-bottom: 14px
+      min-height: 88px
+      padding: 20px 40px
+      background-color: $clr_0
+      border: 1px solid $clr_1
+      border-radius: 60px
+      color: $clr_1
+      transition: border-color .2s linear
 
-    +phone
-      margin: 0 auto
-      margin-bottom: 14px
+      &:not(:last-child)
+        margin-bottom: 20px
 
-    &:hover
-      background-color: transparent
-      border: 2px solid $color__1
-      color: $color__1
+      &:hover
+        border-color: $clr_3
 
-  +small
-    //padding: 30px 15px
+      &:focus
+        border-color: $clr_3
 
-  +phone
-    width: 100%
-    padding: 30px 10px
+      &.error
+        border-color: red
 
+        &:hover
+          border-color: red
+
+        &:focus
+          border-color: red
+
+      +phone
+        padding: 20px
+        min-height: 40px
+
+    .form-note
+      position: relative
+      display: block
+      cursor: pointer
+
+      &:hover
+        .form-note__checkbox
+          border-color: $clr_3
+
+          &::after
+            background-color: $clr_1
+
+        .form-note__text
+          color: $clr_3
+
+      &__input
+        display: none
+
+        &:checked + .form-note__checkbox
+          &::after
+            opacity: 1
+            visibility: visible
+
+      &__checkbox
+        flex-shrink: 0
+        display: inline-flex
+        position: absolute
+        left: 0
+        top: 5px
+        width: 16px
+        height: 16px
+        border: 1px solid $clr_1
+        border-radius: 4px
+        cursor: pointer
+        transition: border-color .2s linear
+
+        &::after
+          content: ""
+          opacity: 0
+          visibility: hidden
+          width: 10px
+          height: 10px
+          position: absolute
+          top: 50%
+          left: 50%
+          border-radius: 2px
+          background-color: $clr_3
+          transform: translate(-50%,-50%)
+          transition: opacity .2s linear, visibility .2s linear, background-color .2s linear
+
+      &__text
+        display: inline-block
+        @include textReset
+        padding-left: 24px
+        max-width: 355px
+        font-size: 16px
+        font-weight: 300
+        line-height: 1.3
+        color: $clr_1
+        transition: color .2s linear
+      
+    &__btn
+      padding: 20px 40px
+      max-width: 237px
+      min-height: 88px
+      font-size: 20px
+      color: $clr_1
+
+      +phone
+        padding: 20px
+        min-height: 40px
+        font-size: 16px

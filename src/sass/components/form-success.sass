@@ -1,23 +1,30 @@
 .form-success
-	width: 912px
-	
-	background: #ffffff
-	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2)
-	padding: 50px 40px
-	width: 534px
-	display: none
-	font-size: 24px
-	color: #000000
+	display: flex
+	flex-direction: column
+	align-items: center
 	font-weight: 600
+	font-size: 50px
+	text-transform: uppercase
 	text-align: center
-	&.active
-		display: block
-
 
 	+small
-		padding: 40px 16px
+		padding: 20px
 		width: 100%
-		font-size: 18px
-		//width: calc( 100% - 30px )
-		//padding: 30px 15px
-		//margin: 0 auto
+		font-size: 30px
+
+	+phone
+		font-size: 25px
+
+	.form-success__descr
+		@include textReset
+		margin-bottom: 20px
+		color: $clr_3
+		font-family: $ff_1
+
+	.form-success__descr.last
+		margin: 0
+		font-size: 24px
+		color: $clr_1
+
+		+phone
+			font-size: 20px

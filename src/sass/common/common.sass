@@ -1,45 +1,86 @@
-// Общие стили 
+// ОБЩИЕ СТИЛИ
 html
   width: 100%
   max-width: 100%
   box-sizing: border-box
   overflow-x: hidden
 
+html.galleryActive
+  overflow-y: hidden !important
+  padding-right: 16px
+
+  .scroll-top
+    right: 16px
+    +medium
+      right: 0
+
+  .social-panel
+    right: 16px
+    +medium
+      right: 0
+
+html.mod-open
+  overflow-y: hidden !important
+  padding-right: 16px
+
+  .scroll-top
+    right: 16px
+    +medium
+      right: 0
+
+  .social-panel
+    right: 16px
+    +medium
+      right: 0
+
+  +small
+    padding-right: 0
 *,
 *::before,
 *::after
   box-sizing: inherit
-      
+
 body
   position: relative
+  display: flex
+  flex-direction: column
   margin: 0
   width: 100%
   max-width: 100%
   min-width: 320px
+  min-height: 100vh
   overflow-x: hidden
-  font-family: $font-family__1
-  font-weight: 400
-  font-size: 16px
-  line-height: 1.4
-  color: $color__2
-  background-color: $color__1
+  font-family: $ff_1
+  font-weight: 250
+  font-size: 18px
+  line-height: 1.1
+  color: $clr_2
+  background-color: $clr_1
+  opacity: 0
+
+  +phone
+    font-size: 16px
 
   &.loading
     opacity: 1
-      
 
   &::-webkit-scrollbar
     width: 16px
-    background-color: rgba($color__3, 0.5)
-
+    background-color: $clr_3
 
   &::-webkit-scrollbar-thumb
-    background-color: $color__3
-    // background: linear-gradient(110.48deg, #63C018 0%, #068B30 100%)
+    background-color: $clr_2
 
 html.menu-open,
 body.menu-open
-  overflow: hidden
+  +small
+    overflow: hidden
+
+h1,h2,h3,h4,h5,h6,p,span,address,small,strong,a,ul,li,ol,button
+  &::selection
+    background-color: $clr_3
+    color: $clr_2
+    transition: color .2s linear, background-color .2s linear
 
 a
   text-decoration: none
@@ -52,22 +93,26 @@ ul,ol
 ul
   list-style: none
 
-  
-
 header,section,footer
   width: 100%
 
 img
-  width: auto
   max-width: 100%
 
 svg
   width: 100%
   height: 100%
+  flex-shrink: 0
+  font-size: 0
 
 address
   font-style: normal
-  font-family: $font-family__1 
+  font-family: $ff_1
+
+input,
+textarea
+  outline: none
+  border: none
 
 button
   display: block
@@ -76,9 +121,9 @@ button
   padding: 0
   outline: none
   cursor: pointer
-  font-family: $font-family__1
+  font-family: $ff_1
 
-//убирает срелки в input number
+// УБИРАЕМ СТРЕЛКИ В INPUT NUMBER
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button
   -webkit-appearance: none
@@ -86,391 +131,359 @@ input::-webkit-inner-spin-button
 input[type='number']
   -moz-appearance: textfield
 
-.slick-slide:focus
-  cursor: default!important
+.section-reset
+  margin-bottom: 120px
+
+  +phone
+    margin-bottom: 80px
+
+.main_active
+  padding-top: 143px
+
+  +small
+    padding-top: 80px
 
 .container
   position: relative
-  max-width: $size__1
+  max-width: $size_1
   width: 100%
   margin: 0 auto
-  padding-left: 50px
-  padding-right: 50px
-  // +large
-  //   width: 1140px
-  // +medium
-  //   width: 950px
-  // +small
-  //   width: 750px
+  padding-left: 25px
+  padding-right: 25px
+
   +phone
-    // width: 100%
     padding: 0 10px
 
+.breadcrumb
+  display: flex
+  list-style: none
+  margin: 0
+  font-size: 18px
 
-.header_1
-  @include titleReset
+  +phone
+    font-size: 16px
+
+  li
+    color: $clr_1
+    transition: color .2s linear
+
+    &:hover
+      color: $clr_5
+
+  li.active
+    color: $clr_2
+
+.color
+  color: $clr_3
+
+.seo-title
+  position: absolute
+  clip: rect(0,0,0,0)
+  margin: -1px
+  padding: 0
+  border: 0
+  width: 1px
+  height: 1px
+  overflow: hidden
+
+.h-1
+  @include textReset
+  font-family: $ff_1
   font-weight: 700
-  font-size: 52px
-  line-height: 1.5
-  text-transform: uppercase
+  font-size: 80px
+  line-height: 1.1
+
   +medium
-    font-size: 60px
-  +small
     font-size: 50px
+
+  +small
+    font-size: 40px
+
   +phone
-    font-size: 31px
+    font-size: 35px
 
-
-.header_2
-  @include titleReset
+.h-2
+  @include textReset
+  margin-bottom: 40px
   font-weight: 700
   font-size: 40px
-  line-height: 1.5
-  text-transform: uppercase
-  color: transparent
-  background-clip: text
-  background-image: linear-gradient(110.48deg, #63C018 0%, #068B30 100%)
-  +medium
-    font-size: 34px
-  +small
-    font-size: 30px
-  +phone
-    font-size: 26px
+  font-family: $ff_1
+  line-height: 1.1
+  color: $clr_2
 
-.header_3
-  @include titleReset
-  font-size: 40px
-  font-weight: 300
-  line-height: 1.3
+  +medium
+    font-size: 40px
+
+  +small
+    margin-bottom: 40px
+    font-size: 35px
+
+  +phone
+    margin-bottom: 30px
+    font-size: 30px
+
+.h-3
+  @include textReset
+  margin-bottom: 30px
+  font-family: $ff_1
+  font-size: 26px
+  font-weight: 400
+  line-height: 1.2
+  color: $clr_1
   text-transform: uppercase
+
+  +phone
+    font-size: 20px
+
+.h-4
+  @include textReset
+  margin-bottom: 30px
+  font-family: $ff_1
+  font-size: 30px
+  font-weight: 700
+  line-height: 1.2
+  color: $clr_2
+  text-transform: uppercase
+
+.h-5
+  @include textReset
+  margin-bottom: 30px
+  font-family: $ff_1
+  font-size: 30px
+  font-weight: 700
+  line-height: 1.2
+  color: $clr_2
+  text-transform: uppercase
+
+.h-6
+  @include textReset
+  margin-bottom: 30px
+  font-family: $ff_1
+  font-size: 30px
+  font-weight: 700
+  line-height: 1.2
+  color: $clr_2
+  text-transform: uppercase
+
+.subtitle
+  @include textReset
+  margin-bottom: 10px
+  font-family: $ff_1
+  font-weight: 700
+  font-size: 12px
+  line-height: 1.2
+  letter-spacing: 1.2px
+  color: $clr_2
+  text-transform: uppercase
+
+  +phone
+    font-size: 12px
 
 .button
-  position: relative
-  display: inline-block
-  text-align: center
-  padding: 16px 31px
-  // max-width: 211px
-  min-height: 54px
-  text-transform: uppercase
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 18px 30px
+  color: $clr_1
+  max-width: 227px
+  width: 100%
+  min-height: 55px
   font-weight: 700
-  font-size: 18px
-  line-height: 1.3
-  color: $color__1
-  border-radius: 10px
-  background: linear-gradient(110.48deg, #63C018 0%, #068B30 100%)
-  box-shadow: 0 2px 7px rgba(213, 80, 208, 0.6)
+  border: 2px solid $clr_3
+  border-radius: 8px
+  background-color: $clr_3
+  transition: background-color .2s linear, color .2s linear
 
-  > span
-      position: relative
-      z-index: 1
+  &:hover
+    color: $clr_3
+    background-color: $clr_0
 
-  &::after
-    content: ''
-    position: absolute
-    top: 0
-    left: 0
+  +phone
+    max-width: 100%
     width: 100%
-    height: 100%
-    color: #fff
-    text-decoration: none
-    background: linear-gradient(110.48deg, #9CDF66 0%, #2DB357 100%)
-    // box-shadow: 0 2px 10px rgba(213, 80, 208, 0.9)
-    border-radius: 10px
-    opacity: 0
-    transition: opacity .3s
-
-  &:hover:after 
-    opacity: 1
-    color: #fff
+    font-size: 15px
 
 .button-invert
-  position: relative
-  display: inline-block
-  text-align: center
-  padding: 16px 31px
-  // max-width: 253px
-  min-height: 51px
-  text-transform: uppercase
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 18px 30px
+  color: $clr_3
+  max-width: 227px
+  width: 100%
+  min-height: 55px
   font-weight: 700
-  font-size: 18px
-  line-height: 1.3
-  color: $color__3
-  border: 2px solid $color__3
-  // border: 2px solid transparent
-  // border-image: linear-gradient(110.48deg, #63C018 0%, #068B30 100%)
-  // border-image-slice: 1
-  border-radius: 10px
-  // background-color: $color__1
-  background-color: transparent
-  transition: border .2s ease-in-out, color .2s ease-in-out
+  border: 2px solid $clr_3
+  border-radius: 8px
+  background-color: $clr_0
+  transition: background-color .2s linear, color .2s linear
 
-  // &::before 
-  //   content: ""
-  //   position: absolute
-  //   top: -2px
-  //   bottom: -2px
-  //   left: -2px
-  //   right: -2px
-  //   background: linear-gradient(110.48deg, #63C018 0%, #068B30 100%)
-  //   border-radius: 12px
-  //   z-index: -1
-  
   &:hover
-    color: $color__3
-    border-color: $color__3
+    color: $clr_1
+    background-color: $clr_3
 
-.form-item
-    position: relative
+  +phone
+    max-width: 100%
     width: 100%
-    margin-bottom: 14px
+    font-size: 15px
 
-    +small
-        margin-bottom: 10px
-
-    &.last
-        margin-bottom: 0
-
-    &.novalid
-        input
-            border: 1px solid red
-
-    input
-        padding: 0px 20px
-        width: 100%
-        height: 51px
-        border: none
-        outline: none
-        background: $color__1
-        border: 2px solid transparent
-        border-radius: 10px
-        font-weight: 700
-        font-size: 16px
-        line-height: 120%
-        color: $color__3
-        font-family: $font-family__1
-
-        &::-webkit-input-placeholder
-            color: $color__3
-        
-        &::-moz-placeholder
-            color: $color__3
-        
-        &:-ms-input-placeholder
-            color: $color__3
-        
-        &:-moz-placeholder
-            color: $color__3
-
-    textarea
-        border: none
-        outline: none
-        resize: none
-        width: 100%
-        height: 130px
-        font-size: 14px
-        color: rgba($color__2, 0.6)
-        font-family: $font-family__1
-        padding: 20px 20px
-        background: $color__1
-        border: 2px solid transparent
-        border-radius: 10px
-
-        &::-webkit-input-placeholder
-            color: $color__3
-        
-        &::-moz-placeholder
-            color: $color__3
-        
-        &:-ms-input-placeholder
-            color: $color__3
-        
-        &:-moz-placeholder
-            color: $color__3
-
-
-    label
-        position: absolute
-        left: 20px
-        top: 17px
-        z-index: 2
-        display: block
-        color: #ffffff
-        font-weight: 400
-        font-size: 18px
-        font-family: $font-family__1
-        transition: 0.3s
-
-
-.form-note
-    position: relative
-    display: block
-    margin-top: 14px
-    cursor: pointer
-
-    +small
-        //font-size: 12px
-        //margin-top: 0
-
-    input
-        display: none
-
-        &:checked + .custom-checkbox
-            &::after
-                display: block
-
-    .custom-checkbox
-        flex-shrink: 0
-        display: inline-flex
-        position: absolute
-        left: 0
-        top: 5px
-        width: 16px
-        height: 16px
-        border: 1px solid $color__1
-        border-radius: 50%
-        cursor: pointer
-
-        // +small
-        //     width: 10px
-        //     height: 10px
-        //     top: 10px
-
-        &::after
-            content: ""
-            display: none
-            width: 10px
-            height: 10px
-            position: absolute
-            top: 50%
-            left: 50%
-            transform: translate(-50%,-50%)
-            border-radius: 50%
-            background: $color__1
-
-            // +small
-            //     width: 6px
-            //     height: 6px
-            //     border-radius: 1px
-
-    .form-note-text
-        display: inline-block
-        padding-left: 24px
-        max-width: 355px
-        font-size: 14px
-        font-weight: 300
-        color: $color__1
-
-        +small
-          font-size: 10px
-
-
-        a
-          color: $color__1
-          text-decoration: underline
-
-          &:hover
-            text-decoration: none
-
-
-// Стили для внутренних страниц
+// СТИЛИ ДЛЯ ВНУТРЕННИХ СТРАНИЦ
 .text-default
-  font-size: 16px
-  line-height: 1.8
-  color: $color__2
-  +medium
-    font-size: 14px
+  line-height: 1.3
 
-  +small
-    font-size: 14px
+  h1
+    @include textReset
+    font-family: $ff_1
+    font-weight: 400
+    font-size: 60px
+    text-transform: uppercase
+
+    +medium
+      font-size: 45px
+
+    +small
+      font-size: 40px
+
+    +phone
+      font-size: 30px
+
+  h2
+    @include textReset
+    font-family: $ff_1
+    margin-bottom: 20px
+    font-weight: 400
+    font-size: 40px
+    text-transform: uppercase
+
+    +medium
+      font-size: 34px
+
+    +small
+      margin-bottom: 25px
+      font-size: 30px
+
+    +phone
+      margin-bottom: 15px
+      font-size: 26px
+
+  h3
+    @include textReset
+    font-family: $ff_1
+    margin-bottom: 20px
+    font-size: 30px
+    font-weight: 400
+    text-transform: uppercase
+
+    +medium
+      font-size: 24px
+
+    +small
+      margin-bottom: 25px
+
+    +phone
+      margin-bottom: 15px
+
+  h4
+    @include textReset
+    font-family: $ff_1
+    font-size: 20px
+    font-weight: 400
+    line-height: 1.3
+    color: $clr_2
+    text-transform: uppercase
+
+    +medium
+      font-size: 24px
+
+    +small
+      margin-bottom: 25px
+
+    +phone
+      margin-bottom: 15px
 
   p
     @include textReset
-    margin-bottom: 36px
-    &:first-child
-      margin-top: 0
-    &:last-child
-      margin-bottom: 0
 
-    +medium
-      margin-top: 20px
+    &:not(:last-child)
       margin-bottom: 20px
 
-    +small
-      margin-top: 15px
-      margin-bottom: 15px
+      +phone
+        margin-bottom: 15px
 
   a
-    color: $color__2
-    text-decoration: underline
+    position: relative
+    color: $clr_3
+
+    &::before
+      content: ''
+      position: absolute
+      bottom: 2px
+      width: 100%
+      height: 2px
+      background-color: $clr_3
+      transition: opacity .2s linear, transform .2s linear, width .2s linear
+
     &:hover
-      text-decoration: none
+      &::before
+        width: 0
+
+  img
+    +phone
+      width: 100%
+      margin: 0!important
+      margin-bottom: 15px!important
 
   ul
     margin-bottom: 20px
     padding-left: 42px
-    list-style: none
-    list-style-image: url(/app/img/check-mark.svg)
+    list-style: inherit
+
+    +phone
+      padding-left: 30px
+
+    li
+      &::marker
+        font-family: $ff_1
+        font-size: 18px
+        font-weight: 600
+        color: $clr_5
 
     li:not(:last-child)
       margin-bottom: 10px
 
   ol
-    padding-left: 20px
+    margin-bottom: 20px
+    padding-left: 40px
+
+    +phone
+      padding-left: 30px
+
     li
-      margin-left: 16px
 
       &::marker
+        font-family: $ff_1
+        font-size: 18px
         font-weight: 600
-        color: $color__3
-            
-  h1
-    @include textReset
-    display: block
-    margin-bottom: 30px
-    font-family: $font-family__1
-    font-size: 60px
-    font-weight: 600
-    line-height: 1.2
-    color: $color__2
-    +medium
-      font-size: 50px
-    +small
-      font-size: 40px
-    +phone
-      font-size: 36px
+        color: $clr_5
 
-  h2
-    @include textReset
-    display: block
-    margin-bottom: 30px
-    font-family: $font-family__1
-    font-size: 40px
-    font-weight: 600
-    line-height: 1.2
-    color: $color__2
-    +medium
-      font-size: 34px
-    +small
-      font-size: 30px
-    +phone
-      font-size: 26px
+    li:not(:last-child)
+      margin-bottom: 10px
 
+  blockquote
+    margin: 0
+    margin-bottom: 20px
+    padding: 20px 10px 20px 20px
+    background: rgba($clr_4, .3)
+    border-left: 5px solid $clr_4
+    ul
+      margin-bottom: 0
 
-  h3
-    @include textReset
-    display: block
-    margin-bottom: 30px
-    font-family: $font-family__1
-    font-size: 40px
-    font-weight: 600
-    line-height: 1.2
-    color: $color__2
-
+    p
+      margin: 0
 
   table
     width: 100%
     border-collapse: collapse
-    // margin-top: 20px
     margin-bottom: 30px
 
     +phone
@@ -488,161 +501,130 @@ input[type='number']
 
     tr
       &:nth-child(2n)
-        background: rgba($color__3, 0.2)
+        background: rgba($clr_3, 0.2)
 
       &:nth-child(1)
-        background: rgba($color__3, 0.8)
+        background: rgba($clr_3, 0.8)
         color: #fff
         td
           font-weight: 700
-          // text-transform: uppercase
-
 
     th
       padding: 10px
-      border: 1px solid $color__3
-
+      border: 1px solid $clr_3
 
     td
-      border: 1px solid $color__3
+      border: 1px solid $clr_3
       padding: 10px
 
-// Стили для галереи
-.gallery-item
-  display: inline-flex
-  //width: 33%
-  //height: 14vw
-  padding: 12px 10px
-  opacity: 1
-  width: calc(33.33% - 10px)
-  height: 276px
-
-  a
-    display: block
-    width: 100%
-    height: 100%
-
-  img
-    width: 100%
-    height: 100%
-    object-fit: cover
-
-    +small
-      width: calc(50% - 10px)
-
-    +phone
-      width: 100%
-
-.arrow-list
-  position: absolute
-  z-index: 4
-  bottom: 0
-  display: inline-flex
-  width: 21px
-  height: 21px
-  cursor: pointer
-  fill: $color__1
-  transition: fill .2s ease-in-out
-
-// Слайдер
-.arrow
-  position: absolute
-  z-index: 4
-  bottom: 0
-  right: 0
-  padding: 10px
-  display: inline-flex
-  width: 51px
-  height: 51px
-  cursor: pointer
-  fill: $color__3
-  border: 2px solid $color__3
-  border-radius: 10px
-  transition: fill .2s ease-in-out, background-color .2s ease-in-out
-
-  &:hover
-    fill: $color__1
-    background-color: $color__3
-
-  &.left
-    right: 95px
-    // transform: translateY(-50%)
-
-  &.right
-    right: 23px
-    transform: rotate(180deg) 
-
-
-.slick-dots
-  // display: inline-flex
-  display: flex
-  margin-top: 30px
-
-  li
-    flex-grow: 1
-    margin-right: 60px
-
-    &:last-child
-      margin-right: 0
-      
-    +phone
-      margin-right: 12px
-
-    &.slick-active
-      button
-        opacity: 1
-
-  button
-    display: block
-    padding: 0
-    // font-size: 15px
-    font-size: 0
-    // width: 201px
-    width: 100%
-    height: 2px
-    border-radius: 3px
-    background-color: #fff
-    opacity: 0.4
-
+// НАВЕРХ СТРАНИЦЫ
 .scroll-top
   position: fixed
   z-index: 30
-  bottom: 10px
-  right: 10px
-  width: 50px
-  height: 50px
-  background-color: $color__1
-  border-radius: 10px
-  border: 2px solid $color__3
-  transition: background-color .2s ease-in-out, transform .2s ease-in-out
-  //display: none
-  //justify-content: center
-  //align-items: center
+  bottom: 20px
+  right: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 46px
+  height: 46px
+  background-color: $clr_3
+  border-radius: 8px 0 0 8px
+  background-color: $clr_3
+  opacity: 1
+  transform: translateY(0px)
+  transition: background-color .2s linear, transform .2s linear, opacity .2s linear
 
-  &.active
-    display: block
+  +medium
+    bottom: 10px
+
+  &_active
+    opacity: 0
+    transform: translateY(200px)
 
   &:hover
-    transform: translateY(-3px)
-    background-color: $color__3
+    background-color: $clr_2
 
-    svg
-      fill: $color__1
+    .scroll-top__icon
+      transform: rotate(180deg) translateY(3px)
 
-  svg
+  &__icon
     display: inline-flex
-    width: 25px
-    fill: $color__3
+    width: 22px
+    height: 22px
+    fill: $clr_1
     transform: rotate(180deg)
-    transition: fill .2s ease-in-out
-        
+    transition: fill .2s linear, transform .2s linear
+
+// ПАНЕЛЬ СОЦИАЛЬНЫХ СЕТЕЙ
+.social-panel
+  position: fixed
+  z-index: 99
+  top: 50%
+  bottom: 50%
+  right: 0
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  &__item
+
+    &:not(:last-child)
+      margin-bottom: 4px
+
+  &__link
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 46px
+    height: 46px
+    background-color: $clr_3
+    border-radius: 8px 0 0 8px
+    transition: background-color .2s linear
+
+    &:hover
+      background-color: $clr_2
+
+  &__icon
+    width: 24px
+    height: 24px
+    fill: $clr_1
+
+// ПАГИНАЦИЯ
+.pagination
+  display: flex
+  justify-content: center
+  padding-top: 40px
+  font-family: $ff_1
+  font-size: 20px
+  color: $clr_2
+
+  +phone
+    font-size: 16px
+
+  .page-item
+    transition: color .2s linear
+
+    &.active
+      color: $clr_3
+
+      &:hover
+        color: $clr_2
+
+    &:hover
+      color: $clr_3
+
+    &:not(:last-child)
+      margin-right: 10px
+
 .paginations
   display: flex
   justify-content: flex-end
   align-items: center
   margin-top: 40px
   +phone
-      font-size: 14px
+    font-size: 14px
 
   .page-arrow
     display: inline-flex
@@ -650,7 +632,7 @@ input[type='number']
     align-items: center
     width: 34px
     height: 34px
-    border: 1px solid $color__1
+    border: 1px solid $clr_1
     border-radius: 50%
 
     &.right
@@ -666,7 +648,7 @@ input[type='number']
     svg
       width: 10px
       height: 20px
-      stroke: $color__1
+      stroke: $clr_1
 
   .pagination-block
     display: block
@@ -674,7 +656,7 @@ input[type='number']
     margin: 0 8px
     width: 40px
     background: #fff
-      
+
     &.active
       .page-current
         border-bottom: 1px solid transparent
@@ -688,9 +670,9 @@ input[type='number']
       width: 100%
       position: relative
       padding: 6px 20px 6px 10px
-      border: 1px solid $color__1
+      border: 1px solid $clr_1
       cursor: pointer
-      
+
       &:after
         content: ""
         display: block
@@ -698,7 +680,7 @@ input[type='number']
         height: 0
         border-left: 5px solid transparent
         border-right: 5px solid transparent
-        border-top: 6px solid $color__1
+        border-top: 6px solid $clr_1
         position: absolute
         top: 50%
         right: 4px
@@ -710,7 +692,7 @@ input[type='number']
       position: absolute
       left: 0
       top: 100%
-      border: 1px solid $color__1
+      border: 1px solid $clr_1
 
     .pagination-number
       display: block
@@ -721,17 +703,13 @@ input[type='number']
       &.active
         opacity: 0.4
 
+// КАПЧА
+.grecaptcha-badge
+  opacity: 0
 
-// Анимация
-.noclick
-  color: $color__2
-  text-decoration: none
-  pointer-events: none
-  text-transform: uppercase
-
+// АНИМАЦИЯ
 [data-scroll]
   opacity: 0
-  transform: translateY(80px)
   transition: 1.5s
 
   &.scrolled
@@ -741,22 +719,51 @@ input[type='number']
   +phone
     transition: 0.6s
     transition-delay: 0s!important
-        
-.disabled
-  display: none!important
 
-.animation-top
+.animation-elem:nth-child(even)
   opacity: 0
-  transform: translateY(20px)
+  transform: translateY(100%)
+  transition: opacity 0.6s
+
+.animation-opacity
+  opacity: 0
 
 .animation-left
   opacity: 0
-  transform: translateX(20px)
+  transform: translate(-50%, 0)
+
+.animation-right
+  opacity: 0
+  transform: translate(50%, 0)
+
+.animation-top
+  transform: translateY(80px)
 
 .animation-resolve
   transition-duration: 0.8s
   opacity: 1
-  transform: translate(0, 0)
+  transform: translate(0, 0) rotateX(0) rotateY(0) translateY(0)
+
+.animation-top-left
+  opacity: 0
+  transform: translate(20px, 20px)
+
+.animation-top-right
+  opacity: 0
+  transform: translate(-20px, -20px)
+
+.animation-bottom-left
+  opacity: 0
+  transform: translate(-40px, 40px)
+
+.animation-bottom-right
+  opacity: 0
+  transform: translate(-20px, -20px)
+
+.animation-resolve
+  transition-duration: 0.8s
+  opacity: 1
+  transform: translate(0,0) rotateX(0) rotateY(0) translateY(0)
 
 .delay-100
   transition-delay: 0.1s

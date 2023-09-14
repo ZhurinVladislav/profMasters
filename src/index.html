@@ -1,975 +1,956 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <base href="/">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./app/css/main.min.css">
-    <title>ProfMasters</title>
+    <meta charset="UTF-8" />
+    <base href="/" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="app/img/favicon.svg" />
+    <!-- SEO -->
+    <title>Отделочные работы в Новороссийске | Твой дом</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- STYLES -->
+    <link rel="stylesheet" href="app/css/main.min.css" />
+    <!-- <link rel="stylesheet" href="/app/css/main.css"> -->
+    <!-- PRELOADER -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('body').classList.add('loading');
+            document.querySelectorAll('[data-animations]').forEach(element => {
+                element.classList.add('animation-resolve')
+            });
+        });
+    </script>
 </head>
+
 <body class="home-page">
-    <!-- header -->
-    <header class="home-page__header header">
+    <!-- HEADER -->
+    <header id="header" class="home-page__header header">
         <div class="header__container container">
-            <div class="header__menu menu">
-                <a href="/" class="menu__logo">
-                    <img class="menu__logo-img" src="./app/img/logo.svg" alt="Логотип ProfMasters">
-                </a>
-                <nav class="menu__list-wrapper">
-                    <ul class="menu__list">
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">
-                                Главная
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">
-                                Преимущества
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">
-                                <span class="menu__link-item">
-                                    Услуги
-                                </span>
-                                <span class="arrow-list">
-                                    <svg>
-                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                            <ul class="menu__list-inner list-inner">
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="#">
-                                        Услуг1
-                                    </a>
-                                </li>
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="#">
-                                        Услуг2
-                                    </a>
-                                </li>
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="#">
-                                        Услуг3
-                                    </a>
-                                </li>
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="#">
-                                        Услуг4
-                                    </a>
-                                </li>
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="#">
-                                        Услуг5
-                                    </a>
-                                </li>
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="#">
-                                        Услуг6
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">
-                                Партфолио    
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">
-                                Цены
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">
-                                О нас
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">
-                                Контакты
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <button class="menu__toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-            <!-- burger menu -->
-            <div class="header__burger menu-mobile">
-                <div class="menu-mobile__wrap">
-                    <nav class="menu-mobile__menu">
-                        <ul class="menu-list">
-                            <li class="menu-item">
-                                <a href="#" class="menu-link">
-                                    <span class="link-item">
-                                        Каталог товаров 
-                                    </span>
-                                    <span class="arrow-list-mob">
-                                        <svg>
-                                            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                        </svg>
-                                    </span>
-                                </a>
-                                <ul class="menu-list__inner">
-                                    <li class="menu-item">
-                                        <a href="#" target="_blank">
-                                            Услуг1
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="#" target="_blank">
-                                            Услуг2
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="#" target="_blank">
-                                            Услуг3
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="#" target="_blank">
-                                            Услуг4
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu-item">
-                                <a href="./main.html" class="menu-link">
-                                    <span class="link-item">
-                                    Услуги
-                                    </span>
-                                    <span class="arrow-list-mob">
-                                    <svg>
-                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                    </svg>
-                                    </span>
-                                </a>
-                                <ul class="menu-list__inner">
-                                    <li class="menu-item">
-                                        <a href="#" target="_blank">
-                                            Услуг1
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="#" target="_blank">
-                                            Услуг2
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="#" target="_blank">
-                                            Услуг3
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="#" target="_blank">
-                                            Услуг4
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu-item parent">
-                                <a href="#" class="menu-link">
-                                    <span class="link-item">
-                                        О компании
+            <a href="/" title="Твой дом" class="header__logo logo">
+                <img class="logo__img" src="/app/img/logo.svg" alt="Твой дом" title="Твой дом" />
+            </a>
+            <nav class="header__menu menu">
+                <ul class="menu__list">
+                    <li class="menu__item active">
+                        <a class="menu__link" href="/">
+                            <span class="menu__link-item"> Главная </span>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="./main.html">
+                            <span class="menu__link-item"> Блог </span>
+                        </a>
+                    </li>
+                    <li class="menu__item parent">
+                        <a class="menu__link" href="./services.html">
+                            <span class="menu__link-item"> Услуги </span>
+                        </a>
+                        <ul class="menu__list-inner list-inner">
+                            <li class="menu__item active">
+                                <a class="list-inner__link" href="./service.html">
+                                    <span class="list-inner__link-item">
+                                        Эконом
                                     </span>
                                 </a>
                             </li>
-                            <li class="menu-item">
-                                <a href="./main-price.html" class="menu-link">
-                                    <span class="link-item">
-                                        Портфолио
+                            <li class="menu__item">
+                                <a class="list-inner__link" href="./service.html">
+                                    <span class="list-inner__link-item">
+                                        Стандарт
                                     </span>
                                 </a>
                             </li>
-                            <li class="menu-item">
-                                <a href="#" class="menu-link">
-                                    <span class="link-item">
-                                        Вопрос-ответ
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="./contact.html" class="menu-link">
-                                    <span class="link-item">
-                                        Контакты
+                            <li class="menu__item">
+                                <a class="list-inner__link" href="./service.html">
+                                    <span class="list-inner__link-item">
+                                        Премиум
                                     </span>
                                 </a>
                             </li>
                         </ul>
-                    </nav>
-                    <ul class="list-svg">
-                        <li class="list-svg__item">
-                            <a href="#" class="list-svg__item-link">
-                                <svg class="list-svg__item-svg">
-                                    <use xlink:href="/app/img/icons/icons.svg#Telegram"></use>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="./contacts.html">
+                            <span class="menu__link-item"> Портфолио </span>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="./contacts.html">
+                            <span class="menu__link-item"> Цены </span>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="./contacts.html">
+                            <span class="menu__link-item"> О нас </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <a class="header__link-tel" href="tel:+798512345678"> +7 (985) 123-456-78 </a>
+            <button class="header__btn btn">
+                <svg class="btn__icon">
+                    <use xlink:href="/app/img/icons/icons.svg#acc"></use>
+                </svg>
+            </button>
+            <button id="burger-toggle" aria-label="Мобильное меню" class="header__menu-toggle menu-toggle">
+                <span class="menu-toggle__item"></span>
+                <span class="menu-toggle__item"></span>
+                <span class="menu-toggle__item"></span>
+            </button>
+        </div>
+        <!-- BURGER-MENU -->
+        <div id="burger-menu" class="header__burger menu-mobile">
+            <div class="menu-mobile__wrap">
+                <nav class="menu-mobile__menu menu">
+                    <ul class="menu__list list">
+                        <li class="list__item item active">
+                            <a href="/" class="item__link" target="_blank">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="list__item item">
+                            <a href="./main.html" class="item__link" target="_blank">
+                                Блог
+                            </a>
+                        </li>
+                        <li class="list__item item parent">
+                            <a href="./services.html" class="item__link" target="_blank">
+                                Услуги
+                            </a>
+                            <button class="item__btn" aria-label="Раскрыть выпадающий список">
+                                <svg class="item__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </button>
+                            <ul class="item__list list">
+                                <li class="list__item item">
+                                    <a class="item__link" href="./service.html"> Эконом </a>
+                                </li>
+                                <li class="list__item item">
+                                    <a class="item__link" href="./service.html"> Стандарт </a>
+                                </li>
+                                <li class="list__item item">
+                                    <a class="item__link" href="./service.html"> Премиум </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list__item item">
+                            <a href="./contacts.html" class="item__link">
+                                <span class="link-item"> Портфолио </span>
+                            </a>
+                        </li>
+                        <li class="list__item item">
+                            <a href="./contacts.html" class="item__link">
+                                <span class="link-item"> Цены </span>
+                            </a>
+                        </li>
+                        <li class="list__item item">
+                            <a href="./contacts.html" class="item__link">
+                                <span class="link-item"> О нас </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="list-link">
+                    <li class="list-link__item">
+                        <a class="list-link__link" href="mailto:test@ya.ru">
+                            <svg class="list-link__icon icon-reset">
+                                <use xlink:href="/app/img/icons/icons.svg#mail"></use>
+                            </svg>
+                            <span class="list-link__descr"> test@ya.ru </span>
+                        </a>
+                    </li>
+                    <li class="list-link__item">
+                        <a target="_blank" class="list-link__link" href="https://wa.me/+798512345678">
+                            <svg class="list-link__icon icon-reset">
+                                <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                            </svg>
+                            <span class="list-link__descr"> WhatsApp </span>
+                        </a>
+                    </li>
+                    <li class="list-link__item">
+                        <a target="_blank" class="list-link__link" href="https://t.me/+798512345678">
+                            <svg class="list-link__icon icon-reset">
+                                <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                            </svg>
+                            <span class="list-link__descr"> Telegram </span>
+                        </a>
+                    </li>
+                    <li class="list-link__item">
+                        <a class="list-link__link" href="tel:+798512345678">
+                            <svg class="list-link__icon icon-reset">
+                                <use xlink:href="/app/img/icons/icons.svg#phone"></use>
+                            </svg>
+                            <span class="list-link__descr"> +7 (985) 123-456-78 </span>
+                        </a>
+                    </li>
+                    <li class="list-link__item">
+                        <a class="list-link__link" href="/">
+                            <svg class="list-link__icon icon-reset">
+                                <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+                            </svg>
+                            <address class="list-link__descr">
+                                г. Новороссийск, ул. Дзержинского, д. 80
+                            </address>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- MAIN -->
+    <main id="main" class="home-page__main main-section">
+        <!-- HERO -->
+        <section class="main-section__hero hero section-reset">
+            <div class="hero__container container">
+                <h1 class="hero__title h-1">
+                    Строительство <span class="hero__color color">правильных</span> домов
+                </h1>
+                <p class="hero__subtitle">
+                    г. Новороссийск, станица Раевская
+                </p>
+                <div class="hero__feedback feedback">
+                    <a href="/" class="feedback__link button btn">
+                        Смотреть проекты
+                    </a>
+                    <button aria-label="Раскрыть окно обратной связи" data-open="form-callback"
+                        class="feedback__btn btn button-invert js-open-modal">
+                        Стоимость строительства
+                    </button>
+                </div>
+                <ul class="hero__list list">
+                    <li class="list__item">
+                        <span class="list__item-number"> 01 </span>
+                        <p class="list__item-text">
+                            Фиксируем цену перед строительством
+                        </p>
+                    </li>
+                    <li class="list__item">
+                        <span class="list__item-number"> 02 </span>
+                        <p class="list__item-text">
+                            Соблюдаем строительные нормативы
+                        </p>
+                    </li>
+                    <li class="list__item">
+                        <span class="list__item-number"> 03 </span>
+                        <p class="list__item-text">
+                            Реализовали более 500 проектов
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- ABOUT -->
+        <!-- <section class="main-section__about about section-reset">
+                <div class="about__container container">
+                    <h2 class="about__title h-2"> <span class="about__color color">Коротко</span> о нас </h2>
+                    <div class="about__content content">
+                        <div class="content__text text">
+                            <p class="text__item">
+                                Здравствуйте, меня зовут <strong>Андрей Грузд,</strong> я&nbsp;являюсь основателем компании <strong>Новострой-Гарант</strong>
+                            </p>
+                            <p class="text__item">
+                                Наша компания занимается строительством частных домов в&nbsp;станице Раевская и&nbsp;ближайшем пригороде Новороссийска уже <strong>более 10&nbsp;лет.</strong> За&nbsp;все это время построено более <strong>500 домов</strong>
+                            </p>
+                            <p class="text__item">
+                                Я&nbsp;имею профессиональное строительное образование, поэтому все дома дома возводятся с&nbsp;соблюдением строительных нормативов и&nbsp;учетом региональных особенностей Краснодарского края. Нашим клиентам мы&nbsp;предлагаем полный комплекс услуг от&nbsp;подбора участка и&nbsp;помощи в&nbsp;оформлении документов до&nbsp;строительства дома под ключ и&nbsp;подключению всех необходимых коммуникаций
+                            </p>
+                            <p class="text__item">
+                                Мы&nbsp;работаем прозрачно, честно и&nbsp;на&nbsp;качество. У&nbsp;нас нет цели где-то сэкономить, чтобы заработать немного побольше. Да, так говорят многие &laquo;честные&raquo; строители...
+                            </p>
+                            <p class="text__item">
+                                Но, во-первых, <strong>я&nbsp;и&nbsp;сам проживаю в&nbsp;станице Раевской</strong> и&nbsp;строю своим соседям, людям с&nbsp;которыми, наверняка, не&nbsp;раз еще встречусь и&nbsp;буду смотреть в&nbsp;лицо. А&nbsp;во-вторых, как всем известно, довольный клиент, приведет двух
+                            </p>
+                            <p class="text__item">
+                                Подробнее об объектах и обо мне можете узнать на моем <a href="https://www.youtube.com/@user-se3vj1cz1d/videos" target="_blank" title="YouTube канал Андрея Грузд">YouTube канале</a>
+                            </p>
+                        </div>
+                        <div class="content__video video">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/O9F8KvM4gtc?si=dtE7KgEXBMeXR0Wc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+        <!-- PROJECTS -->
+        <!-- <section class="main-section__projects projects section-reset">
+                <div class="projects__container container">
+                    <h2 class="projects__title h-2"> <span class="projects__color color">
+                        Каталог</span> проектов
+                    </h2>
+                    <div class="projects__text text">
+                        <p class="text__item">
+                            В каталоге представлены типовые проекты. Каждый из проектов дорабатывается под особенности участка и пожелания заказчика
+                        </p>
+                        <a href="/" target="_blank" rel="noopener noreferrer" class="text__link button-invert">
+                            Больше проектов
+                        </a>
+                    </div>
+                    <div class="projects__swiper-wrapper swiper-wrapper">
+                        <button aria-label="Предыдущий слайд" class="arrow arrow_prev">
+                            <svg class="arrow__icon">
+                                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                            </svg>
+                        </button>
+                        <div class="swiper-wrapper__swiper swiper projects-slider">
+                            <div class="swiper-wrapper projects-slider__wrapper">
+                                <a href="/" class="swiper-slide projects-slider__slide slide">
+                                    <div class="slide__img-wrapp">
+                                        <img
+                                            src="./app/img/projects/img-1.jpg"
+                                            class="slide__img"
+                                        />
+                                    </div>
+                                    <div class="slide__descr descr">
+                                        <h3 class="descr__title">
+                                            Проект дома &laquo;Z144&raquo;
+                                        </h3>
+                                        <p class="descr__text">
+                                            Проект одноэтажного дома c&nbsp;гаражом для двух авто, с&nbsp;возможностью обустройства мансарды
+                                        </p>
+                                        <div class="descr__content-bottom content-bottom">
+                                            <ul class="content-bottom__list list">
+                                                <li class="list__item">
+                                                    1 этаж
+                                                </li>
+                                                <li class="list__item">
+                                                    159 м2
+                                                </li>
+                                            </ul>
+                                            <span class="content-bottom__arrow-wrapp arrow-wrapp">
+                                                <svg class="arrow-wrapp__icon">
+                                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="/" class="swiper-slide projects-slider__slide slide">
+                                    <div class="slide__img-wrapp">
+                                        <img
+                                            src="./app/img/projects/img-2.jpg"
+                                            class="slide__img"
+                                        />
+                                    </div>
+                                    <div class="slide__descr descr">
+                                        <h3 class="descr__title">
+                                            Проект дома &laquo;Zx8&nbsp;GP2&raquo;
+                                        </h3>
+                                        <p class="descr__text">
+                                            Двухэтажный дом с&nbsp;низкой кровлей с&nbsp;двухместным гаражом
+                                        </p>
+                                        <div class="descr__content-bottom content-bottom">
+                                            <ul class="content-bottom__list list">
+                                                <li class="list__item">
+                                                    2 этаж
+                                                </li>
+                                                <li class="list__item">
+                                                    188 м2
+                                                </li>
+                                            </ul>
+                                            <span class="content-bottom__arrow-wrapp arrow-wrapp">
+                                                <svg class="arrow-wrapp__icon">
+                                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="/" class="swiper-slide projects-slider__slide slide">
+                                    <div class="slide__img-wrapp">
+                                        <img
+                                            src="./app/img/projects/img-3.jpg"
+                                            class="slide__img"
+                                        />
+                                    </div>
+                                    <div class="slide__descr descr">
+                                        <h3 class="descr__title">
+                                            Проект дома &laquo;Zx2&raquo;
+                                        </h3>
+                                        <p class="descr__text">
+                                            Двухэтажный дом простой формы со&nbsp;вторым светом над гостиной и&nbsp;встроенным гаражом
+                                        </p>
+                                        <div class="descr__content-bottom content-bottom">
+                                            <ul class="content-bottom__list list">
+                                                <li class="list__item">
+                                                    2 этаж
+                                                </li>
+                                                <li class="list__item">
+                                                    189 м2
+                                                </li>
+                                            </ul>
+                                            <span class="content-bottom__arrow-wrapp arrow-wrapp">
+                                                <svg class="arrow-wrapp__icon">
+                                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <button aria-label="Следующий слайд" class="arrow arrow_next">
+                            <svg class="arrow__icon">
+                                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section> -->
+        <!-- ADVANTAGES -->
+        <!-- <section class="main-section__advantages advantages section-reset">
+                <div class="advantages__container container">
+                    <ul class="advantages__list list">
+                        <li class="list__item item delay-100 animation-left" data-scroll="800">
+                            <div class="item__icon" style="background-image: url(./app/img/advantages/img-1.svg)"></div>
+                            <p class="item__descr">
+                                <strong>100&nbsp;000+ </strong>тонн перевалено в&nbsp;Новороссийске в&nbsp;2022 году
+                            </p>
+                        </li>
+                        <li class="list__item item delay-200 animation-left" data-scroll="800">
+                            <div class="item__icon" style="background-image: url(./app/img/advantages/img-2.svg)"></div>
+                            <p class="item__descr">
+                                <strong>5000+ </strong>контейнеров отгружено в&nbsp;2022 году
+                            </p>
+                        </li>
+                        <li class="list__item item delay-300 animation-top" data-scroll="800">
+                            <div class="item__icon" style="background-image: url(./app/img/advantages/img-3.svg)"></div>
+                            <p class="item__descr">
+                                <strong>Собственный </strong>автопарк грузовых автомобилей
+                            </p>
+                        </li>
+                        <li class="list__item item delay-400 animation-right" data-scroll="800">
+                            <div class="item__icon" style="background-image: url(./app/img/advantages/img-4.svg)"></div>
+                            <p class="item__descr">
+                                <strong>Ключевой </strong>экспедитор нескольких линиях
+                            </p>
+                        </li>
+                        <li class="list__item item delay-500 animation-left" data-scroll="800">
+                            <div class="item__icon" style="background-image: url(./app/img/advantages/img-5.svg)"></div>
+                            <p class="item__descr">
+                                <strong>13&nbsp;лет </strong>на&nbsp;рынке логистических услуг
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section> -->
+        <!-- SERVICES -->
+        <!-- <section class="main-section__services services section-reset">
+                <div class="services__container container">
+                    <ul class="services__list list">
+                        <li class="list__item animation-right delay-300" data-scroll="800">
+                            <a class="list__link link" href="/" target="_blank">
+                                <img
+                                    src="/app/img/services/img-1.jpg"
+                                    alt="Международные перевозки"
+                                    title="Международные перевозки"
+                                    class="link__img link__img_hidden"
+                                />
+                                <img
+                                    src="/app/img/services/img-1.jpg"
+                                    alt="Международные перевозки"
+                                    title="Международные перевозки"
+                                    class="link__img"
+                                />
+                                <h3 class="link__title h-3"> Международные перевозки </h3>
+                                <svg class="link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="list-svg__item">
-                        <a href="#" class="list-svg__item-link">
-                                <svg class="list-svg__item-svg">
-                                    <use xlink:href="/app/img/icons/icons.svg#WhatsApp"></use>
+                        <li class="list__item animation-right delay-300" data-scroll="800">
+                            <a class="list__link link" href="/" target="_blank">
+                                <img
+                                    src="/app/img/services/img-2.jpg"
+                                    alt="Внутрипортовое экспедирование"
+                                    title="Внутрипортовое экспедирование"
+                                    class="link__img link__img_hidden"
+                                />
+                                <img
+                                    src="/app/img/services/img-2.jpg"
+                                    alt="Внутрипортовое экспедирование"
+                                    title="Внутрипортовое экспедирование"
+                                    class="link__img"
+                                />
+                                <h3 class="link__title h-3"> Внутрипортовое экспедирование </h3>
+                                <svg class="link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="list-svg__item">
-                            <a href="#" class="list-svg__item-link">
-                                <svg class="list-svg__item-svg">
-                                    <use xlink:href="/app/img/icons/icons.svg#Mail"></use>
+                        <li class="list__item animation-right delay-300" data-scroll="800">
+                            <a class="list__link link" href="/" target="_blank">
+                                <img
+                                    src="/app/img/services/img-3.jpg"
+                                    alt="Складские услуги"
+                                    title="Складские услуги"
+                                    class="link__img link__img_hidden"
+                                />
+                                <img
+                                    src="/app/img/services/img-3.jpg"
+                                    alt="Складские услуги"
+                                    title="Складские услуги"
+                                    class="link__img"
+                                />
+                                <h3 class="link__title h-3"> Складские услуги </h3>
+                                <svg class="link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="list__item animation-right delay-300" data-scroll="800">
+                            <a class="list__link link" href="/" target="_blank">
+                                <img
+                                    src="/app/img/services/img-4.jpg"
+                                    alt="Дистрибуция и доставка"
+                                    title="Дистрибуция и доставка"
+                                    class="link__img link__img_hidden"
+                                />
+                                <img
+                                    src="/app/img/services/img-4.jpg"
+                                    alt="Дистрибуция и доставка"
+                                    title="Дистрибуция и доставка"
+                                    class="link__img"
+                                />
+                                <h3 class="link__title h-3"> Дистрибуция и&nbsp;доставка</h3>
+                                <svg class="link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="list__item animation-right delay-300" data-scroll="800">
+                            <a class="list__link link" href="/" target="_blank">
+                                <img
+                                    src="/app/img/services/img-5.jpg"
+                                    alt="Таможенное оформление"
+                                    title="Таможенное оформление"
+                                    class="link__img link__img_hidden"
+                                />
+                                <img
+                                    src="/app/img/services/img-5.jpg"
+                                    alt="Таможенное оформление"
+                                    title="Таможенное оформление"
+                                    class="link__img"
+                                />
+                                <h3 class="link__title h-3"> Таможенное оформление </h3>
+                                <svg class="link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
                                 </svg>
                             </a>
                         </li>
                     </ul>
-                    <div class="phone">
-                        <a href="tel:8 (918) 623 91 52" class="phone-link">
-                            8 (918) 623 91 52
+                </div>
+            </section> -->
+        <!-- FORM-MAIN -->
+        <!-- <section class="main-section__form-main form-main section-reset">
+                <div class="form-main__bg-img"></div>
+                <div class="form-main__container container">
+                    <h2 class="form-main__title h-2"> Оставить заявку </h2>
+                    <form action="/" class="form-main__form form">
+                        <ul class="form__list list">
+                            <li class="list__item animation-bottom delay-300" data-scroll="800">
+                                <input class="list__input" type="text" name="from" placeholder="Откуда*" required>
+                            </li>
+                            <li class="list__item animation-bottom delay-300" data-scroll="800">
+                                <input class="list__input" type="text" name="to" placeholder="Куда*" required>
+                            </li>
+                            <li class="list__item animation-bottom delay-300" data-scroll="800">
+                                <input class="list__input" type="number" name="phone" required placeholder="Телефон*">
+                            </li>
+                            <li class="list__item list__item_comment animation-bottom delay-300" data-scroll="800">
+                                <textarea class="list__textarea" name="comment" placeholder="Комментарий*"></textarea>
+                            </li>
+                            <li class="list__item animation-bottom delay-300" data-scroll="800">
+                                <button aria-label="Отправить заявку на расчёт" class="list__dtn button-invert btn">
+                                    <span class="btn__text"> Рассчитать </span>
+                                    <svg class="feedback__item-icon btn__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="list__item list__item_checkbox animation-bottom delay-400" data-scroll="800">
+                                <label class="list__form-note form-note">
+                                    <input class="form-note__input" type="checkbox" checked />
+                                    <div class="form-note__checkbox"></div>
+                                    <p class="form-note__text">
+                                        Даю согласие на&nbsp;обработку персональных данных
+                                    </p>
+                                </label>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </section> -->
+        <!-- RATES -->
+        <!-- <section class="main-section__rates rates section-reset">
+                <div class="rates__container container">
+                    <div class="rates__content content">
+                        <p class="content__descr animation-opacity delay-300" data-scroll="800">
+                            Примерные тарифы на&nbsp;наши услуги, Вы&nbsp;можете посмотреть здесь
+                        </p>
+                        <a href="/" class="content__link button-invert btn animation-opacity delay-400" data-scroll="800">
+                            <span class="btn__text"> Посмотреть </span>
+                            <svg class="btn__icon">
+                                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                            </svg>
                         </a>
                     </div>
-                    <div class="address">
-                        <span class="address-icon">
-                            <svg class="list-svg__item-svg">
-                            <use xlink:href="/app/img/svg_sprite.svg#map"></use>
-                            </svg>
-                        </span>
-                        <span class="address-text">
-                            г. Новороссийск, ул. Энгельса, 7, офис 103.
-                        </span>
+                </div>
+            </section> -->
+        <!-- CERTIFICATES -->
+        <!-- <section class="main-section__projects certificates section-reset">
+                <div class="certificates__container container">
+                    <div class="certificates__title-wrap title-wrap">
+                        <h2 class="title-wrap__header h-2 animation-left delay-300" data-scroll="800"> Нас рекомендуют </h2>
+                        <p class="title-wrap__descr animation-right delay-300" data-scroll="800"> Реальные отзывы о&nbsp;работе с&nbsp;нами </p>
                     </div>
-                    <div class="button" data-open="form-callback">
-                        Оставить заявку
+                    <div class="certificates__swiper swiper certificates-slider animation-opacity delay-300" data-scroll="800">
+                        <div class="swiper-wrapper certificates-slider__wrapper">
+                            <a href="./app/img/certificates/img-1.jpg" class="swiper-slide certificates-slider__slide slide">
+                                <div class="slide__img-wrapp">
+                                    <img
+                                        src="./app/img/certificates/img-1.jpg"
+                                        class="slide__img swiper-img"
+                                    />
+                                   <span class="slide__icon-wrap">
+                                        <svg class="slide__icon">
+                                            <use xlink:href="/app/img/icons/icons.svg#eye"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <h3 class="slide__title">
+                                    ООО &laquo;БОЯСАН&raquo;
+                                </h3>
+                                <p class="slide__descr">
+                                    Поставщик электростатического порошкового покрытия на&nbsp;территории&nbsp;РФ
+                                </p>
+                            </a>
+                            <a href="./app/img/certificates/img-2.jpg" class="swiper-slide certificates-slider__slide">
+                                <div class="slide__img-wrapp">
+                                    <img
+                                        src="./app/img/certificates/img-2.jpg"
+                                        class="slide__img swiper-img"
+                                    />
+                                   <span class="slide__icon-wrap">
+                                        <svg class="slide__icon">
+                                            <use xlink:href="/app/img/icons/icons.svg#eye"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <h3 class="slide__title">
+                                    ООО &laquo;ЮГАГРОЭКСПОРТ&raquo;
+                                </h3>
+                                <p class="slide__descr">
+                                    Экспорт сельскохозяйственной продукции
+                                </p>
+                            </a>
+                            <a href="./app/img/certificates/img-3.jpg" class="swiper-slide certificates-slider__slide">
+                                <div class="slide__img-wrapp">
+                                    <img
+                                        src="./app/img/certificates/img-3.jpg"
+                                        class="slide__img swiper-img"
+                                    />
+                                   <span class="slide__icon-wrap">
+                                        <svg class="slide__icon">
+                                            <use xlink:href="/app/img/icons/icons.svg#eye"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <h3 class="slide__title">
+                                    ООО &laquo;АККОН РУС&raquo;
+                                </h3>
+                                <p class="slide__descr">
+                                    Международная морская линия
+                                </p>
+                            </a>
+                            <a href="./app/img/certificates/img-4.jpg" class="swiper-slide certificates-slider__slide">
+                                <div class="slide__img-wrapp">
+                                    <img
+                                        src="./app/img/certificates/img-4.jpg"
+                                        class="slide__img swiper-img"
+                                    />
+                                   <span class="slide__icon-wrap">
+                                        <svg class="slide__icon">
+                                            <use xlink:href="/app/img/icons/icons.svg#eye"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <h3 class="slide__title">
+                                    ООО &laquo;КОСМЕТИК ВИА&raquo;
+                                </h3>
+                                <p class="slide__descr">
+                                    Поставщик ингредиентов для производства косметической продукции на&nbsp;территории&nbsp;РФ
+                                </p>
+                            </a>
+                            <a href="./app/img/certificates/img-1.jpg" class="swiper-slide certificates-slider__slide slide">
+                                <div class="slide__img-wrapp">
+                                    <img
+                                        src="./app/img/certificates/img-1.jpg"
+                                        class="slide__img swiper-img"
+                                    />
+                                    <span class="slide__icon-wrap">
+                                        <svg class="slide__icon">
+                                            <use xlink:href="/app/img/icons/icons.svg#eye"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <h3 class="slide__title">
+                                    ООО &laquo;БОЯСАН&raquo;
+                                </h3>
+                                <p class="slide__descr">
+                                    Поставщик электростатического порошкового покрытия на&nbsp;территории&nbsp;РФ
+                                </p>
+                            </a>
+                            <a href="./app/img/certificates/img-2.jpg" class="swiper-slide certificates-slider__slide">
+                                <div class="slide__img-wrapp">
+                                    <img
+                                        src="./app/img/certificates/img-2.jpg"
+                                        class="slide__img swiper-img"
+                                    />
+                                   <span class="slide__icon-wrap">
+                                        <svg class="slide__icon">
+                                            <use xlink:href="/app/img/icons/icons.svg#eye"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <h3 class="slide__title">
+                                    ООО &laquo;ЮГАГРОЭКСПОРТ&raquo;
+                                </h3>
+                                <p class="slide__descr">
+                                    Экспорт сельскохозяйственной продукции
+                                </p>
+                            </a>
+                            <a href="./app/img/certificates/img-3.jpg" class="swiper-slide certificates-slider__slide">
+                                <div class="slide__img-wrapp">
+                                    <img
+                                        src="./app/img/certificates/img-3.jpg"
+                                        class="slide__img swiper-img"
+                                    />
+                                   <span class="slide__icon-wrap">
+                                        <svg class="slide__icon">
+                                            <use xlink:href="/app/img/icons/icons.svg#eye"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <h3 class="slide__title">
+                                    ООО &laquo;АККОН РУС&raquo;
+                                </h3>
+                                <p class="slide__descr">
+                                    Международная морская линия
+                                </p>
+                            </a>
+                            <a href="./app/img/certificates/img-4.jpg" class="swiper-slide certificates-slider__slide">
+                                <div class="slide__img-wrapp">
+                                    <img
+                                        src="./app/img/certificates/img-4.jpg"
+                                        class="slide__img swiper-img"
+                                    />
+                                   <span class="slide__icon-wrap">
+                                        <svg class="slide__icon">
+                                            <use xlink:href="/app/img/icons/icons.svg#eye"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <h3 class="slide__title">
+                                    ООО &laquo;КОСМЕТИК ВИА&raquo;
+                                </h3>
+                                <p class="slide__descr">
+                                    Поставщик ингредиентов для производства косметической продукции на&nbsp;территории&nbsp;РФ
+                                </p>
+                            </a>
+                            <a href="./app/img/certificates/img-1.jpg" class="swiper-slide certificates-slider__slide slide">
+                                <div class="slide__img-wrapp">
+                                    <img
+                                        src="./app/img/certificates/img-1.jpg"
+                                        class="slide__img swiper-img"
+                                    />
+                                   <span class="slide__icon-wrap">
+                                        <svg class="slide__icon">
+                                            <use xlink:href="/app/img/icons/icons.svg#eye"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <h3 class="slide__title">
+                                    ООО &laquo;БОЯСАН&raquo;
+                                </h3>
+                                <p class="slide__descr">
+                                    Поставщик электростатического порошкового покрытия на&nbsp;территории&nbsp;РФ
+                                </p>
+                            </a>
+                        </div>
+                        <div class="certificates-slider__arrow-wrap arrow-wrap">
+                            <button aria-label="Предыдущий слайд" class="arrow-wrap__arrow arrow arrow_prev animation-left delay-300" data-scroll="800">
+                                <svg class="arrow__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </button>
+                            <button aria-label="Следующий слайд" class="arrow-wrap__arrow arrow arrow_next animation-right delay-300" data-scroll="800">
+                                <svg class="arrow__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        
                     </div>
                 </div>
-            </div>
-        </div>
-    </header>
-    <!-- hero -->
-    <section class="home-page__hero hero">
-        <div class="hero__container container">
-            <div class="hero__content">
-                <h1 class="hero__title header_1">
-                    РЕМОНТ И ОТДЕЛКА КВАРТИР
-                </h1>
-                <p class="hero__subtitle">
-                    под ключ в Новороссийске
-                </p>
-                <div class="hero__btn-wrapper">
-                    <button class="hero__btn" data-open="form-callback">
-                        Заказать басплатный расчет
-                    </button>
-                    <img class="hero__img-btn" src="./app/img/hero/btn-hero.svg" alt="Кнопка">
-                    <img class="hero__logo" src="./app/img/logo-big.svg" alt="Логотип">
+            </section> -->
+        <!-- CONTACTS -->
+        <!-- <section class="main-section__contacts contacts section-reset">
+                <div class="contacts__container container">
+                    <div class="contacts__content content">
+                        <h2 class="content__title h-2 animation-left delay-300" data-scroll="800"> Наши контакты </h2>
+                        <ul class="content__list list">
+                            <li class="list__item item animation-left delay-300" data-scroll="800">
+                                <h3 class="item__title"> Адрес </h3>
+                                <a href="/" class="item__link">
+                                    <address class="item__link-address">
+                                        г. Новороссийск, ул. Леднева, д.&nbsp;5, строение&nbsp;4, оф. 2-4
+                                    </address>
+                                </a>
+                            </li>
+                            <li class="list__item item animation-left delay-300" data-scroll="800">
+                                <h3 class="item__title"> Телефон </h3>
+                                <a href="tel:+79530900008" class="item__link">
+                                    8 (953) 090-00-08
+                                </a>
+                                <a href="tel:+79189419828" class="item__link">
+                                    8 (918) 941-98-28
+                                </a>
+                            </li>
+                            <li class="list__item item animation-left delay-300" data-scroll="800">
+                                <h3 class="item__title" > Мессенджеры </h3>
+                                <a class="item__link"  href="https://wa.me/+79530900008" target="_blank">
+                                    WhatsApp
+                                </a>
+                                <a class="item__link" href="https://t.me/+79897637935" target="_blank">
+                                    Telegram
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contacts__map map animation-right delay-300" data-scroll="800">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0fa48c4de99f5998eeeeaa24d0f19fd1993f49e4f434f474090abc8023d298c4&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+                        <div class="map__img"></div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section> -->
+        <!-- OVERLAY -->
+        <article class="modal form-callback" id="form-callback">
+            <div class="form-callback__box modal-box">
+                <button aria-label="Закрыть окно обратной связи"
+                    class="form-callback__close-btn modal-close js-close-modal"></button>
+                <h3 class="form-callback__title modal-title"> Связаться с нами </h3>
 
-    <section class="home-page__advantages advantages">
-        <div class="advantages__container container">
-            <p>
-                Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные тексты. Составитель коварных вдали бросил диких встретил журчит заголовок залетают даже, власти ты собрал вопрос ручеек безорфографичный океана всеми рукопись осталось.
-            </p>
-            <p>
-                Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные тексты. Составитель коварных вдали бросил диких встретил журчит заголовок залетают даже, власти ты собрал вопрос ручеек безорфографичный океана всеми рукопись осталось.
-            </p>
-            <p>
-                Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные тексты. Составитель коварных вдали бросил диких встретил журчит заголовок залетают даже, власти ты собрал вопрос ручеек безорфографичный океана всеми рукопись осталось.
-            </p>
-            <p>
-                Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные тексты. Составитель коварных вдали бросил диких встретил журчит заголовок залетают даже, власти ты собрал вопрос ручеек безорфографичный океана всеми рукопись осталось.
-            </p>
-        </div>
-    </section>
-  
-  <!-- slider -->
-  <!-- <section class="home-page__slider slider-wrapper">
-    <div class="slider-wrapper__container container">
-      <h2 class="slider-wrapper__title header_2">
-        Примеры работ
-      </h2>
-      <div class="slider-wrapper__slider slider">
-        <div class="slider__slide slide-content">
-          <div class="slide-content__wrapper">
-            <div class="slide-content__top-content">
-              <div class="slide-content__slider slider-left">
-                <div class="slider-left__top">
-                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
-                   <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </a>
-                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
-                   <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </a>
-                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
-                   <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </a>
-                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
-                   <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </a>
-                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
-                   <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </a>
-                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
-                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                   </a>
-                   <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
-                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                   </a>
-                </div>
-                <div class="slider-left__bottom">
-                  <div class="slider-left__slide-item">
-                     <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </div>
-                  <div class="slider-left__slide-item">
-                     <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </div>
-                  <div class="slider-left__slide-item">
-                     <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </div>
-                  <div class="slider-left__slide-item">
-                     <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </div>
-                  <div class="slider-left__slide-item">
-                     <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </div>
-                  <div class="slider-left__slide-item">
-                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                 </div>
-                 <div class="slider-left__slide-item">
-                  <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-               </div>
-                </div>
-              </div>
-              <div class="slide-content__descr">
-                <ul class="slide-content__list">
-                  <li class="slide-content__item">
-                    <h3 class="slide-content__title">
-                      Дата монтажа:
-                    </h3>
-                    <p class="slide-content__text">
-                      06.10.2022
-                    </p>
-                  </li>
-                  <li class="slide-content__item">
-                    <h3 class="slide-content__title">
-                      Место:
-                    </h3>
-                    <p class="slide-content__text">
-                      Город Новороссийск, Ул.Анисовая
-                    </p>
-                  </li>
-                  <li class="slide-content__item">
-                    <h3 class="slide-content__title">
-                      Монтаж:
-                    </h3>
-                    <p class="slide-content__text">
-                      Астра 5
-                    </p>
-                  </li>
-                  <li class="slide-content__item">
-                    <h3 class="slide-content__title">
-                      Стоимость оборудования:
-                    </h3>
-                    <p class="slide-content__text">
-                      145 000 ₽
-                    </p>
-                  </li>
-                  <li class="slide-content__item">
-                    <h3 class="slide-content__title">
-                      Срок изготовления изделия:
-                    </h3>
-                    <p class="slide-content__text">
-                      до 14 дней
-                    </p>
-                  </li>
-                  <li class="slide-content__item">
-                    <h3 class="slide-content__title">
-                      Оценка земельно-монтажных работ:
-                    </h3>
-                    <p class="slide-content__text">
-                      80 000 ₽
-                    </p>
-                  </li>
-                  <li class="slide-content__item">
-                    <h3 class="slide-content__title">
-                      Доставка изделия до объекта:
-                    </h3>
-                    <p class="slide-content__text">
-                      В подарок
-                    </p>
-                  </li>
-                  <li class="slide-content__item">
-                    <h3 class="slide-content__title">
-                      Земельно-монтажные работы:
-                    </h3>
-                    <p class="slide-content__text">
-                      1 день
-                    </p>
-                  </li>
-                </ul>
-                <button class="slide-content__btn button" data-open="form-callback">
-                  <span>
-                    Рассчитать проект
-                  </span>
-                </button>
-              </div>
-            </div>
-            <div class="slide-content__btn-wrapper">
-                <button class="slide-content__btn-slide button-invert">
-                  Смотреть все работы
-                </button>
-                <div class="slide-content__arrow-wrapper">
-                  <span class="main-arrow-left arrow left slick-arrow"><svg><use xlink:href="/app/img//icons/icons.svg#arrow-slider"></use></svg></span>
-                  <span class="main-arrow-right arrow right slick-arrow"><svg><use xlink:href="/app/img//icons/icons.svg#arrow-slider"></use></svg></span>
-                </div>
-            </div>
-          </div>
-        </div>
-        <div class="slider__slide slide-content">
-          <div class="slide-content__wrapper">
-            <div class="slide-content__top-content">
-              <div class="slide-content__slider slider-left">
-                <div class="slider-left__top">
-                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
-                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </a>
-                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
-                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </a>
-                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
-                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </a>
-                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
-                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </a>
-                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
-                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </a>
-                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
-                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </a>
-                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
-                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </a>
-                </div>
-                <div class="slider-left__bottom">
-                  <div class="slider-left__slide-item">
-                      <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </div>
-                  <div class="slider-left__slide-item">
-                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </div>
-                  <div class="slider-left__slide-item">
-                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </div>
-                  <div class="slider-left__slide-item">
-                      <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </div>
-                  <div class="slider-left__slide-item">
-                      <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </div>
-                  <div class="slider-left__slide-item">
-                      <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </div>
-                  <div class="slider-left__slide-item">
-                      <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </div>
-                </div>
-              </div>
-              <div class="slide-content__descr">
-                <ul class="slide-content__list">
-                  <li class="slide-content__item">
-                    <h3 class="slide-content__title">
-                      Дата монтажа:
-                    </h3>
-                    <p class="slide-content__text">
-                      06.10.2022
-                    </p>
-                  </li>
-                  <li class="slide-content__item">
-                    <h3 class="slide-content__title">
-                      Место:
-                    </h3>
-                    <p class="slide-content__text">
-                      Город Новороссийск, Ул.Анисовая
-                    </p>
-                  </li>
-                  <li class="slide-content__item">
-                    <h3 class="slide-content__title">
-                      Монтаж:
-                    </h3>
-                    <p class="slide-content__text">
-                      Астра 5
-                    </p>
-                  </li>
-                  <li class="slide-content__item">
-                    <h3 class="slide-content__title">
-                      Стоимость оборудования:
-                    </h3>
-                    <p class="slide-content__text">
-                      145 000 ₽
-                    </p>
-                  </li>
-                  <li class="slide-content__item">
-                    <h3 class="slide-content__title">
-                      Срок изготовления изделия:
-                    </h3>
-                    <p class="slide-content__text">
-                      до 14 дней
-                    </p>
-                  </li>
-                  <li class="slide-content__item">
-                    <h3 class="slide-content__title">
-                      Оценка земельно-монтажных работ:
-                    </h3>
-                    <p class="slide-content__text">
-                      80 000 ₽
-                    </p>
-                  </li>
-                  <li class="slide-content__item">
-                    <h3 class="slide-content__title">
-                      Доставка изделия до объекта:
-                    </h3>
-                    <p class="slide-content__text">
-                      В подарок
-                    </p>
-                  </li>
-                  <li class="slide-content__item">
-                    <h3 class="slide-content__title">
-                      Земельно-монтажные работы:
-                    </h3>
-                    <p class="slide-content__text">
-                      1 день
-                    </p>
-                  </li>
-                </ul>
-                <button class="slide-content__btn button" data-open="form-callback">
-                  <span>
-                    Рассчитать проект
-                  </span>
-                </button>
-              </div>
-            </div>
-            <div class="slide-content__btn-wrapper">
-                <button class="slide-content__btn-slide button-invert">
-                  Смотреть все работы
-                </button>
-                <div class="slide-content__arrow-wrapper">
-                  <span class="main-arrow-left arrow left slick-arrow"><svg><use xlink:href="/app/img//icons/icons.svg#arrow-slider"></use></svg></span>
-                  <span class="main-arrow-right arrow right slick-arrow"><svg><use xlink:href="/app/img//icons/icons.svg#arrow-slider"></use></svg></span>
-                </div>
-            </div>
-          </div>
-        </div>
-        <div class="slider__slide slide-content">
-          <div class="slide-content__wrapper">
-            <div class="slide-content__top-content">
-              <div class="slide-content__slider slider-left">
-                <div class="slider-left__top">
-                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
-                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </a>
-                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
-                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </a>
-                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
-                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </a>
-                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
-                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </a>
-                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
-                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </a>
-                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
-                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </a>
-                  <a class="slider-left__slide-link" href="./app/img/slider/slide-1.jpg">
-                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </a>
-                </div>
-                <div class="slider-left__bottom">
-                  <div class="slider-left__slide-item">
-                      <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </div>
-                  <div class="slider-left__slide-item">
-                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </div>
-                  <div class="slider-left__slide-item">
-                    <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </div>
-                  <div class="slider-left__slide-item">
-                      <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </div>
-                  <div class="slider-left__slide-item">
-                      <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </div>
-                  <div class="slider-left__slide-item">
-                      <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </div>
-                  <div class="slider-left__slide-item">
-                      <img class="slider-left__img-bottom" src="./app/img/slider/slide-1.jpg" alt="Первый слайд">
-                  </div>
-                </div>
-              </div>
-              <div class="slide-content__descr">
-                <ul class="slide-content__list">
-                  <li class="slide-content__item">
-                    <h3 class="slide-content__title">
-                      Дата монтажа:
-                    </h3>
-                    <p class="slide-content__text">
-                      06.10.2022
-                    </p>
-                  </li>
-                  <li class="slide-content__item">
-                    <h3 class="slide-content__title">
-                      Место:
-                    </h3>
-                    <p class="slide-content__text">
-                      Город Новороссийск, Ул.Анисовая
-                    </p>
-                  </li>
-                  <li class="slide-content__item">
-                    <h3 class="slide-content__title">
-                      Монтаж:
-                    </h3>
-                    <p class="slide-content__text">
-                      Астра 5
-                    </p>
-                  </li>
-                  <li class="slide-content__item">
-                    <h3 class="slide-content__title">
-                      Стоимость оборудования:
-                    </h3>
-                    <p class="slide-content__text">
-                      145 000 ₽
-                    </p>
-                  </li>
-                  <li class="slide-content__item">
-                    <h3 class="slide-content__title">
-                      Срок изготовления изделия:
-                    </h3>
-                    <p class="slide-content__text">
-                      до 14 дней
-                    </p>
-                  </li>
-                  <li class="slide-content__item">
-                    <h3 class="slide-content__title">
-                      Оценка земельно-монтажных работ:
-                    </h3>
-                    <p class="slide-content__text">
-                      80 000 ₽
-                    </p>
-                  </li>
-                  <li class="slide-content__item">
-                    <h3 class="slide-content__title">
-                      Доставка изделия до объекта:
-                    </h3>
-                    <p class="slide-content__text">
-                      В подарок
-                    </p>
-                  </li>
-                  <li class="slide-content__item">
-                    <h3 class="slide-content__title">
-                      Земельно-монтажные работы:
-                    </h3>
-                    <p class="slide-content__text">
-                      1 день
-                    </p>
-                  </li>
-                </ul>
-                <button class="slide-content__btn button" data-open="form-callback">
-                  <span>
-                    Рассчитать проект
-                  </span>
-                </button>
-              </div>
-            </div>
-            <div class="slide-content__btn-wrapper">
-                <button class="slide-content__btn-slide button-invert">
-                  Смотреть все работы
-                </button>
-                <div class="slide-content__arrow-wrapper">
-                  <span class="main-arrow-left arrow left slick-arrow"><svg><use xlink:href="/app/img//icons/icons.svg#arrow-slider"></use></svg></span>
-                  <span class="main-arrow-right arrow right slick-arrow"><svg><use xlink:href="/app/img//icons/icons.svg#arrow-slider"></use></svg></span>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-  <!-- footer -->
-  <!-- <footer class="home-page__footer footer">
-    <div class="footer__container container">
-      <div class="footer__content">
-        <div class="footer__lists">
-          <div class="footer__list-left list-reset">
-            <h3 class="footer__title">
-              Меню
-            </h3>
-            <ul class="footer__content-list">
-              <li class="footer__list-item">
-                <a href="#" class="footer__link">
-                  Каталог товаров
-                </a>
-              </li>
-              <li class="footer__list-item">
-                <a href="#" class="footer__link">
-                  Услуги
-                </a>
-              </li>
-              <li class="footer__list-item">
-                <a href="#" class="footer__link">
-                  О компании
-                </a>
-              </li>
-              <li class="footer__list-item">
-                <a href="#" class="footer__link">
-                  Портфолио
-                </a>
-              </li>
-              <li class="footer__list-item">
-                <a href="#" class="footer__link">
-                  Вопрос-ответ
-                </a>
-              </li>
-              <li class="footer__list-item">
-                <a href="#" class="footer__link">
-                  Контакты
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer__list-middle list-reset">
-            <h3 class="footer__title">
-              Каталог
-            </h3>
-            <ul class="footer__content-list">
-              <li class="footer__list-item">
-                <a href="#" class="footer__link">
-                  Септики для дома и&nbsp;дачи
-                </a>
-              </li>
-              <li class="footer__list-item">
-                <a href="#" class="footer__link">
-                  Септики для коммерции
-                </a>
-              </li>
-              <li class="footer__list-item">
-                <a href="#" class="footer__link">
-                  Дренажные системы
-                </a>
-              </li>
-              <li class="footer__list-item">
-                <a href="#" class="footer__link">
-                  Компрессоры
-                </a>
-              </li>
-              <li class="footer__list-item">
-                <a href="#" class="footer__link">
-                  Комплектующие
-                </a>
-              </li>
-              <li class="footer__list-item">
-                <a href="#" class="footer__link">
-                  Акционные товары
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer__list-right list-reset">
-            <h3 class="footer__title">
-              Контакты
-            </h3>
-            <ul class="footer__content-list last-list">
-              <li class="footer__list-item link-phone">
-                <a class="link-phone__number" href="tel:+79184399702">
-                  <svg class="link-phone__svg">
-                    <use xlink:href="/app/img/icons/icons.svg#Phone"></use>
-                  </svg>
-                  +7 (918) 439-97-02
-                </a>
-                <span class="link-phone__item">
-                  Ежедневно с&nbsp;9:00 до&nbsp;19:00
-                </span>
-              </li>
-              <li class="footer__list-item">
-                <ul class="footer__social-link">
-                  <li class="footer__social-svg">
-                    <a href="#" target="_blank">
-                      <svg class="footer__svg footer__svg-tg">
-                        <use xlink:href="/app/img/icons/icons.svg#Mail"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="footer__social-svg">
-                    <a href="#" class="list-svg__item-link">
-                      <svg class="footer__svg footer__svg-vk">
-                        <use xlink:href="/app/img/icons/icons.svg#Telegram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="footer__social-svg">
-                    <a href="#" target="_blank">
-                      <svg class="footer__svg footer__svg-whts">
-                        <use xlink:href="/app/img/icons/icons.svg#WhatsApp"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="footer__list-item address">
-                г. Новороссийск Новороссийское шоссе, 45
-              </li>
-              <li class="footer__list-item requisites">
-                <ul class="requisites__list">
-                  <li class="requisites__list-item">
-                    ИП&nbsp;Шепель Олег Анатольевич
-                  </li>
-                  <li class="requisites__list-item">
-                    ИНН: 233703874242
-                  </li>
-                  <li class="requisites__list-item">
-                    ОГРН: 304233715600188
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer> -->
-  <!-- copyright -->
-  <!-- <section class="home-page__copyright copyright">
-    <div class="copyright__container container">
-      <ul class="copyright__list">
-        <li class="copyright__item">
-          <a href="#" class="copyright__link">
-            Пользовательское соглашение
-          </a>
-        </li>
-        <li class="copyright__item">
-          Copyright © 2012–2022. Все права защищены
-        </li>
-        <li class="copyright__item">
-          <a href="https://web2.agency/" class="copyright__link">
-            <svg class="copyright__svg" width="40" height="17" viewBox="0 0 40 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12.8328 1.45968L10.603 15.8291L10.8002 16.9847H7.90292L8.10011 15.8291L6.64391 6.78168L5.23322 15.8291L5.43041 16.9847H2.56352L2.76071 15.8291L0.4854 1.49009L0 0.0151367H2.62419L2.47251 0.729806L3.98938 11.1001L5.50626 0.729806L5.32423 0.0151367H7.97876L7.79674 0.729806L9.32878 11.1001L10.8457 0.729806L10.6636 0.0151367H13.3182L12.8328 1.45968Z" fill="url(#paint0_linear_281_4371)"/>
-              <path d="M21.5549 16.9848H15.1992L15.4723 15.9356V1.03399L15.1992 0H21.5549L21.9341 2.34168L20.842 2.09839H17.8082L17.5655 2.34168V7.1619L17.8082 7.40519H18.6577L19.7043 7.13148V9.79249L18.6577 9.51878H17.8082L17.5655 9.79249V14.5975L17.8082 14.8408H20.842L21.9341 14.5975L21.5549 16.9848Z" fill="url(#paint1_linear_281_4371)"/>
-              <path d="M24.1949 1.03399L23.9219 0H29.4736L30.5506 1.04919V7.42039L29.4585 8.46959L30.5506 9.5492V15.9356L29.4736 16.9848H23.937L24.2101 15.9356V1.03399H24.1949ZM26.3185 2.34168V7.1619L26.5612 7.40519H28.1843L28.427 7.1619V2.34168L28.1843 2.09839H26.5612L26.3185 2.34168ZM28.4422 9.79249L28.1995 9.5492H26.5764L26.3337 9.79249V14.5975L26.5764 14.8408H28.1843L28.427 14.5975V9.79249H28.4422Z" fill="url(#paint2_linear_281_4371)"/>
-              <path d="M39.9994 12.7424L39.7264 13.7764V17H33.3707V8.48479L34.4173 7.4356H37.3601L37.6028 7.19231V2.3873L37.3601 2.14401H35.7067L35.464 2.3873V3.20841L35.7522 4.2424H33.0977L33.3707 3.20841V1.07961L34.4173 0H38.6494L39.7264 1.07961V8.5L38.6494 9.57961H35.7067L35.464 9.8229V14.5975L35.7067 14.8408H37.3601L37.6028 14.5975V13.7764L37.3297 12.7424H39.9994Z" fill="url(#paint3_linear_281_4371)"/>
-              <mask id="mask0_281_4371" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="17">
-              <path d="M12.8328 1.45968L10.603 15.8291L10.8002 16.9847H7.90292L8.10011 15.8291L6.64391 6.78168L5.23322 15.8291L5.43041 16.9847H2.56352L2.76071 15.8291L0.4854 1.49009L0 0.0151367H2.62419L2.47251 0.729806L3.98938 11.1001L5.50626 0.729806L5.32423 0.0151367H7.97876L7.79674 0.729806L9.32878 11.1001L10.8457 0.729806L10.6636 0.0151367H13.3182L12.8328 1.45968Z" fill="url(#paint4_linear_281_4371)"/>
-              <path d="M21.5549 16.9848H15.1992L15.4723 15.9356V1.03399L15.1992 0H21.5549L21.9341 2.34168L20.842 2.09839H17.8082L17.5655 2.34168V7.1619L17.8082 7.40519H18.6577L19.7043 7.13148V9.79249L18.6577 9.51878H17.8082L17.5655 9.79249V14.5975L17.8082 14.8408H20.842L21.9341 14.5975L21.5549 16.9848Z" fill="url(#paint5_linear_281_4371)"/>
-              <path d="M24.1949 1.03399L23.9219 0H29.4736L30.5506 1.04919V7.42039L29.4585 8.46959L30.5506 9.5492V15.9356L29.4736 16.9848H23.937L24.2101 15.9356V1.03399H24.1949ZM26.3185 2.34168V7.1619L26.5612 7.40519H28.1843L28.427 7.1619V2.34168L28.1843 2.09839H26.5612L26.3185 2.34168ZM28.4422 9.79249L28.1995 9.5492H26.5764L26.3337 9.79249V14.5975L26.5764 14.8408H28.1843L28.427 14.5975V9.79249H28.4422Z" fill="url(#paint6_linear_281_4371)"/>
-              <path d="M39.9994 12.7424L39.7264 13.7764V17H33.3707V8.48479L34.4173 7.4356H37.3601L37.6028 7.19231V2.3873L37.3601 2.14401H35.7067L35.464 2.3873V3.20841L35.7522 4.2424H33.0977L33.3707 3.20841V1.07961L34.4173 0H38.6494L39.7264 1.07961V8.5L38.6494 9.57961H35.7067L35.464 9.8229V14.5975L35.7067 14.8408H37.3601L37.6028 14.5975V13.7764L37.3297 12.7424H39.9994Z" fill="url(#paint7_linear_281_4371)"/>
-              </mask>
-              <g mask="url(#mask0_281_4371)">
-              <rect opacity="0.15" x="-89" y="-69" width="1738" height="798" fill="url(#paint8_linear_281_4371)"/>
-              </g>
-              <defs>
-              <linearGradient id="paint0_linear_281_4371" x1="0" y1="0.0151367" x2="16.8448" y2="4.95233" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#63C018"/>
-              <stop offset="1" stop-color="#068B30"/>
-              </linearGradient>
-              <linearGradient id="paint1_linear_281_4371" x1="15.1992" y1="0" x2="24.2509" y2="1.34042" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#63C018"/>
-              <stop offset="1" stop-color="#068B30"/>
-              </linearGradient>
-              <linearGradient id="paint2_linear_281_4371" x1="23.9219" y1="0" x2="32.8368" y2="1.29936" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#63C018"/>
-              <stop offset="1" stop-color="#068B30"/>
-              </linearGradient>
-              <linearGradient id="paint3_linear_281_4371" x1="33.0977" y1="0" x2="42.3639" y2="1.40494" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#63C018"/>
-              <stop offset="1" stop-color="#068B30"/>
-              </linearGradient>
-              <linearGradient id="paint4_linear_281_4371" x1="0.590201" y1="2.79312" x2="19.1289" y2="17.0892" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#00D4D1"/>
-              <stop offset="1" stop-color="#00B9D4"/>
-              </linearGradient>
-              <linearGradient id="paint5_linear_281_4371" x1="4.49173" y1="-2.26603" x2="23.0305" y2="12.0301" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#00D4D1"/>
-              <stop offset="1" stop-color="#00B9D4"/>
-              </linearGradient>
-              <linearGradient id="paint6_linear_281_4371" x1="7.61017" y1="-6.30911" x2="26.1489" y2="7.98696" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#00D4D1"/>
-              <stop offset="1" stop-color="#00B9D4"/>
-              </linearGradient>
-              <linearGradient id="paint7_linear_281_4371" x1="11.0934" y1="-10.8278" x2="29.6322" y2="3.46824" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#00D4D1"/>
-              <stop offset="1" stop-color="#00B9D4"/>
-              </linearGradient>
-              <linearGradient id="paint8_linear_281_4371" x1="-89" y1="-69" x2="1347.64" y2="1099.51" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#63C018"/>
-              <stop offset="1" stop-color="#068B30"/>
-              </linearGradient>
-              </defs>
-            </svg>
-            <span class="copyright__link-item">
-              Создание сайтов
-            </span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </section> -->
-  <!-- overlay -->
-    <div class="home-page__overlay overlay" >
-        <div class="overlay__wrapper">
-            <div class="overlay__bg"></div>
-            <div class="overlay__content">
-                <span class="overlay__close"></span>
-                <!-- form-callback -->
-                <form action="/" method="post" class="form form-callback novalid">
-                    <input type="hidden" name="count" value="0">
-                        <h3 class="header_2">
-                            Заказать звонок
-                        </h3>
-                        <div class="form-item">
-                            <input type="text" name="name" placeholder="имя" >
-                        </div>
-                        <div class="form-item">
-                            <input type="tel" name="phone" placeholder="телефон" >
-                        </div>
-                        <button class="button-invert">
-                            Отправить
-                        </button>
-                        <label class="form-note">
-                        <input type="checkbox" checked>
-                        <div class="custom-checkbox"></div>
-                        <div class="form-note-text">
-                            Нажимая на&nbsp;кнопку, я&nbsp;соглашаюсь с&nbsp;обработкой <a href="#">персональных данных</a>
-                        </div>
-                    </label>
+                <form action="" class="form form__form-callback form-mod">
+                    <div class="form-callback__wrap-input wrap-input">
+                        <input data-min-length="2" data-max-length="25" class="wrap-input__input js-input" type="text"
+                            placeholder="Имя*">
+                        <input data-min-length="2" data-max-length="25" class="wrap-input__input js-input" type="text"
+                            placeholder="Email*">
+                        <label class="wrap-input__item form-note">
+                            <input class="form-note__input" type="checkbox" checked />
+                            <div class="form-note__checkbox"></div>
+                            <p class="form-note__text">
+                                Даю согласие на&nbsp;обработку персональных данных
+                            </p>
+                        </label>
+                    </div>
+                    <button aria-label="Отправить заявку" type="submit"
+                        class="wrap-input__btn button js-btn-submit">Отправить</button>
                 </form>
-                <!-- form-success -->
+            </div>
+        </article>
+        <!-- FORM-SUCCESS -->
+        <article class="modal form-success" id="form-success">
+            <div class="form-success__box modal-box">
+                <button aria-label="Закрыть окно обратной связи"
+                    class="form-success__close-btn modal-close js-close-modal"></button>
                 <div class="form-success">
-                    <div class="header_2">Спасибо!</div>
-                    <div class="header_3">Ваши данные отправлены.</div>
+                    <p class="form-success__descr">Спасибо!</p>
+                    <p class="form-success__descr last">Ваши данные были отправлены.</p>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- scroll-top -->
-    <button class="scroll-top">
-        <svg>
+        </article>
+    </main>
+    <!-- FOOTER -->
+    <!-- <footer class="home-page__footer footer animation-opacity delay-300" data-scroll="1000">
+            <div class="footer__container container">
+                <a href="/" title="логотип LGM" class="footer__link-logo">
+                    <img
+                        class="footer__logo"
+                        src="/app/img/logo.svg"
+                        alt="логотип LGM"
+                        title="логотип LGM"
+                    />
+                </a>
+                <nav class="content__menu menu">
+                    <ul class="menu__list list">
+                        <li class="list__item active">
+                            <a href="/" class="list__link"> Главная </a>
+                        </li>
+                        <li class="list__item">
+                            <a href="/" class="list__link"> О нас </a>
+                        </li>
+                        <li class="list__item">
+                            <a href="/" class="list__link"> Услуги </a>
+                        </li>
+                        <li class="list__item">
+                            <a href="/" class="list__link"> Тарифы </a>
+                        </li>
+                        <li class="list__item">
+                            <a href="/" class="list__link"> Контакты </a>
+                        </li>
+                    </ul>
+                </nav>
+                <a class="footer__link" href="https://web2.agency/" target="_blank">
+                    Создание сайтов WEB2
+                </a>
+            </div>
+        </footer> -->
+    <!-- SOCIAL PANEL -->
+    <ul class="home-page__social-panel social-panel">
+        <li class="social-panel__item">
+            <a aria-label="Ссылка на WhatsApp" href="https://wa.me/+79528150000" class="social-panel__link">
+                <svg class="social-panel__icon">
+                    <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                </svg>
+            </a>
+        </li>
+        <li class="social-panel__item">
+            <a aria-label="Ссылка на Telegram" href="https://t.me/+79528150000" class="social-panel__link">
+                <svg class="social-panel__icon">
+                    <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                </svg>
+            </a>
+        </li>
+        <li class="social-panel__item">
+            <a aria-label="Ссылка на калькулятор" href="/" class="social-panel__link">
+                <svg class="social-panel__icon">
+                    <use xlink:href="/app/img/icons/icons.svg#calc"></use>
+                </svg>
+            </a>
+        </li>
+    </ul>
+    <!-- SCROLL-TOP -->
+    <button id="scrollTop" class="scroll-top scroll-top_active" aria-label="Наверх страницы">
+        <svg class="scroll-top__icon">
             <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
         </svg>
     </button>
-    <!-- scripts -->
+    <!-- SCRIPTS -->
     <script src="/app/js/libs/jquery-3.3.1.min.js"></script>
-    <script src="/app/js/libs/slick.min.js"></script>
-    <script src="./app/js/main.min.js"></script>
     <script src="/app/js/libs/lightgallery-all.min.js"></script>
-    <script src="/app/js/libs/functions.js"></script>
- <!-- <script src="/app/js/libs/jquery.marquee.min.js"></script>-->
+    <script src="/app/js/libs/swiper-bundle.min.js"></script>
+    <script src="/app/js/libs/webp.js"></script>
+    <script src="/app/js/libs/modal-window.js"></script>
+    <script src="/app/js/libs/scroll-library.js"></script>
+    <!-- <script src="/app/js/libs/SmoothScroll.min.js" crossorigin="anonymous"></script> -->
+    <!-- <script src="/app/js/libs/ScrollTrigger.min.js"></script> -->
+    <!-- <script src="/app/js/libs/gsap.min.js"></script> -->
+    <script src="/app/js/main.min.js"></script>
+    <!-- <script src="/app/js/main.js"></script> -->
 </body>
+
 </html>
