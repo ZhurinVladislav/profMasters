@@ -32,38 +32,38 @@
             <a href="/" title="Твой дом" class="header__logo logo">
                 <img class="logo__img" src="/app/img/logo.svg" alt="Твой дом" title="Твой дом" />
             </a>
-            <nav class="header__menu menu">
-                <ul class="menu__list">
-                    <li class="menu__item active">
-                        <a class="menu__link" href="/">
-                            <span class="menu__link-item"> Главная </span>
+            <nav class="header__menu-header menu-header">
+                <ul class="menu-header__list">
+                    <li class="menu-header__item active">
+                        <a class="menu-header__link" href="/">
+                            <span class="menu-header__link-item"> Главная </span>
                         </a>
                     </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="./main.html">
-                            <span class="menu__link-item"> Блог </span>
+                    <li class="menu-header__item">
+                        <a class="menu-header__link" href="./main.html">
+                            <span class="menu-header__link-item"> Блог </span>
                         </a>
                     </li>
-                    <li class="menu__item parent">
-                        <a class="menu__link" href="./services.html">
-                            <span class="menu__link-item"> Услуги </span>
+                    <li class="menu-header__item parent">
+                        <a class="menu-header__link" href="./services.html">
+                            <span class="menu-header__link-item"> Услуги </span>
                         </a>
-                        <ul class="menu__list-inner list-inner">
-                            <li class="menu__item active">
+                        <ul class="menu-header__list-inner list-inner">
+                            <li class="menu-header__item active">
                                 <a class="list-inner__link" href="./service.html">
                                     <span class="list-inner__link-item">
                                         Эконом
                                     </span>
                                 </a>
                             </li>
-                            <li class="menu__item">
+                            <li class="menu-header__item">
                                 <a class="list-inner__link" href="./service.html">
                                     <span class="list-inner__link-item">
                                         Стандарт
                                     </span>
                                 </a>
                             </li>
-                            <li class="menu__item">
+                            <li class="menu-header__item">
                                 <a class="list-inner__link" href="./service.html">
                                     <span class="list-inner__link-item">
                                         Премиум
@@ -72,19 +72,19 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="./contacts.html">
-                            <span class="menu__link-item"> Портфолио </span>
+                    <li class="menu-header__item">
+                        <a class="menu-header__link" href="./contacts.html">
+                            <span class="menu-header__link-item"> Портфолио </span>
                         </a>
                     </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="./contacts.html">
-                            <span class="menu__link-item"> Цены </span>
+                    <li class="menu-header__item">
+                        <a class="menu-header__link" href="./contacts.html">
+                            <span class="menu-header__link-item"> Цены </span>
                         </a>
                     </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="./contacts.html">
-                            <span class="menu__link-item"> О нас </span>
+                    <li class="menu-header__item">
+                        <a class="menu-header__link" href="./contacts.html">
+                            <span class="menu-header__link-item"> О нас </span>
                         </a>
                     </li>
                 </ul>
@@ -204,40 +204,46 @@
     <!-- MAIN -->
     <main id="main" class="home-page__main main-section">
         <!-- HERO -->
-        <section class="main-section__hero hero section-reset">
+        <section class="main-section__hero hero">
             <div class="hero__container container">
                 <h1 class="hero__title h-1">
-                    Строительство <span class="hero__color color">правильных</span> домов
+                    Ремонт и&nbsp;отделка квартир
                 </h1>
                 <p class="hero__subtitle">
-                    г. Новороссийск, станица Раевская
+                    под ключ в Новороссийске
                 </p>
-                <div class="hero__feedback feedback">
-                    <a href="/" class="feedback__link button btn">
-                        Смотреть проекты
-                    </a>
-                    <button aria-label="Раскрыть окно обратной связи" data-open="form-callback"
-                        class="feedback__btn btn button-invert js-open-modal">
-                        Стоимость строительства
-                    </button>
-                </div>
-                <ul class="hero__list list">
-                    <li class="list__item">
-                        <span class="list__item-number"> 01 </span>
-                        <p class="list__item-text">
-                            Фиксируем цену перед строительством
+                <button aria-label="Раскрыть окно обратной связи" data-open="form-callback"
+                    class="hero__btn btn js-open-modal">
+                    <span class="btn__text"> Стоимость строительства </span>
+                    <div class="btn__img"></div>
+                </button>
+                <!-- <a href="/" title="Твой дом" class="hero-img__logo logo">
+                    <img class="logo__img" src="/app/img//hero/logo.svg" alt="Твой дом" title="Твой дом" />
+                </a> -->
+                <!-- <div class="hero-img__bg"></div> -->
+            </div>
+        </section>
+        <!-- ADVANTAGES -->
+        <section class="main-section__advantages advantages">
+            <div class="advantages__container container">
+                <h2 class="advantages__title h-2"> Наши преимущества </h2>
+                <ul class="advantages__list list">
+                    <li class="list__item item">
+                        <div class="item__icon" style="background-image: url(./app/img/advantages/img-1.svg)"></div>
+                        <p class="item__descr">
+                            Опытные мастера, профессионалы своего дела с&nbsp;большим опытом работы
                         </p>
                     </li>
-                    <li class="list__item">
-                        <span class="list__item-number"> 02 </span>
-                        <p class="list__item-text">
-                            Соблюдаем строительные нормативы
+                    <li class="list__item item">
+                        <div class="item__icon" style="background-image: url(./app/img/advantages/img-2.svg)"></div>
+                        <p class="item__descr">
+                            За&nbsp;все время работы более 100 выполненных объектов ремонта под ключ
                         </p>
                     </li>
-                    <li class="list__item">
-                        <span class="list__item-number"> 03 </span>
-                        <p class="list__item-text">
-                            Реализовали более 500 проектов
+                    <li class="list__item item">
+                        <div class="item__icon" style="background-image: url(./app/img/advantages/img-3.svg)"></div>
+                        <p class="item__descr">
+                            Сопровождение всех этапов работ опытным подрядчиком и&nbsp;бесплатные консультации
                         </p>
                     </li>
                 </ul>

@@ -8,11 +8,25 @@
     top: 0
 
 .header
-  z-index: 100
+  position: fixed
+  top: 6px
+  z-index: 500
+  display: flex
+  // margin-top: 6px
+  // padding-top: 6px
   min-height: 50px
   font-weight: 700
   color: $clr_2
   transition: backdrop-filter .2s linear
+
+  &::before
+    content: ''
+    position: absolute
+    z-index: -1
+    width: 100%
+    height: 100%
+    background-color: rgba($clr_1, .7)
+    backdrop-filter: blur(6px)
 
   +small
     min-height: 60px
@@ -55,9 +69,12 @@
       &:hover
         opacity: .7
 
-  .menu
+  .menu-header
     max-width: 808px
     width: 100%
+
+    +large
+      max-width: 600px
 
     +small
       display: none
@@ -67,6 +84,9 @@
       align-items: center
       justify-content: space-between
       margin-right: 30px
+
+      +large
+        font-size: 16px
 
     &__item
 
@@ -85,7 +105,7 @@
 
       &:hover
 
-        .menu__link
+        .menu-header__link
           &::before
             opacity: 1
 
@@ -99,22 +119,22 @@
 
       &.active
         &:hover
-          .menu__link
+          .menu-header__link
             &::before
-              opacity: 0
+              background-color: $clr_3
 
-        .menu__link
+        .menu-header__link
           &::before
             opacity: 1
 
       &.parent
 
-        .menu__link
+        .menu-header__link
           display: flex
           align-items: center
           justify-content: center
 
-          .menu__link-item
+          .menu-header__link-item
             margin-right: 5px
             // padding-bottom: 0
 
@@ -122,7 +142,6 @@
 
           .menu__link::before
             opacity: 1
-            transform: translate3d(0, 0, 0)
 
     &__link
       position: relative
@@ -130,19 +149,20 @@
       &::before
         content: ''
         position: absolute
-        top: 21%
+        top: 50%
+        bottom: 50%
         right: -15px
         width: 9px
         height: 9px
         background-color: $clr_2
         opacity: 0
-        // transform: translateY(50%)
-        transition: opacity .4s linear
+        transform: translateY(-50%)
+        transition: opacity .4s linear, background-color .2s linear
 
     // ВЫПАДАЮЩИЙ СПИСОК НА ДЕСКТОПЕ
     .list-inner
       position: absolute
-      top: 30px
+      top: 20px
       left: 0
       z-index: 100
       opacity: 0
@@ -150,15 +170,15 @@
       padding: 15px 10px
       width: 258px
       // background-color: $clr_3
-      background-color: rgba($clr_2, .6)
+      background-color: rgba($clr_1, .6)
       backdrop-filter: blur(6px)
       box-shadow: 0px 4px 20px 0px rgba(43, 42, 40, 0.3)
       font-size: 14px
       color: $clr_1
-      transform: translateX(-50px)
+      // transform: translateX(-50px)
       transition: visibility .2s linear, opacity .3s linear, transform .2s linear
 
-      .menu__item
+      .menu-header__item
         position: relative
         text-align: start
         width: 100%
@@ -183,7 +203,7 @@
             bottom: 0
             width: 95%
             height: 1px
-            background-color: rgba($clr_1, .4)
+            background-color: $clr_1
 
       &__link-item
         transition: color .2s ease-in-out
@@ -192,22 +212,42 @@
           color: $clr_2
 
   &__link-tel
+    margin-right: 10px
     font-weight: 500
     color: $clr_6
+    transition: color .2s linear
+
+    +small
+      display: none
+
+    &:hover
+      color: $clr_2
 
   .btn
     display: flex
     align-items: center
     justify-content: center
+    flex-shrink: 0
     width: 36px
     height: 36px
     background-color: $clr_5
     border-radius: 50%
+    transition: background-color .2s linear
+
+    +small
+      display: none
+
+    &:hover
+      background-color: $clr_1
+
+      .btn__icon
+        fill: $clr_2
 
     &__icon
       width: 13px
       height: 17px
       fill: $clr_6
+      transition: fill .2s linear
 
   .menu-toggle
     position: relative
@@ -243,7 +283,6 @@
 
     &.menu-toggle_active
       .menu-toggle__item
-        background-color: $clr_1
         &:nth-child(1)
           transform: rotate(45deg) translate(-50%, -50%)
           transform-origin: top left
