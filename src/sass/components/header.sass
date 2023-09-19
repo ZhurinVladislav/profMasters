@@ -1,23 +1,11 @@
-@keyframes fadeInUp
-  from
-    opacity: 0
-    top: -50px
-
-  to
-    opacity: 1
-    top: 0
-
 .header
   position: fixed
   top: 6px
   z-index: 500
   display: flex
-  // margin-top: 6px
-  // padding-top: 6px
   min-height: 50px
   font-weight: 700
   color: $clr_2
-  transition: backdrop-filter .2s linear
 
   &::before
     content: ''
@@ -30,17 +18,6 @@
 
   +small
     min-height: 60px
-
-  &.menu-active
-    backdrop-filter: none
-
-  &_active
-    position: fixed
-    animation-name: fadeInUp
-    animation-duration: 1s
-    z-index: 500
-    background-color: rgba($clr_2, .7)
-    backdrop-filter: blur(6px)
 
   &__container
     display: flex
@@ -55,10 +32,6 @@
     min-height: 32px
     font-size: 0
     flex-shrink: 0
-
-    // +phone
-    //   max-width: 120px
-    //   min-height: 40px
 
     &__img
       width: 100%
@@ -211,43 +184,47 @@
         &:hover
           color: $clr_2
 
-  &__link-tel
-    margin-right: 10px
-    font-weight: 500
-    color: $clr_6
-    transition: color .2s linear
-
-    +small
-      display: none
-
-    &:hover
-      color: $clr_2
-
-  .btn
+  .content-right
     display: flex
     align-items: center
-    justify-content: center
-    flex-shrink: 0
-    width: 36px
-    height: 36px
-    background-color: $clr_5
-    border-radius: 50%
-    transition: background-color .2s linear
 
-    +small
-      display: none
+    &__link-tel
+      margin-right: 24px
+      font-weight: 500
+      color: $clr_6
+      transition: color .2s linear
 
-    &:hover
-      background-color: $clr_1
+      +small
+        display: none
 
-      .btn__icon
-        fill: $clr_2
+      &:hover
+        color: $clr_2
 
-    &__icon
-      width: 13px
-      height: 17px
-      fill: $clr_6
-      transition: fill .2s linear
+    .btn
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-shrink: 0
+      width: 36px
+      height: 36px
+      background-color: $clr_5
+      border-radius: 50%
+      transition: background-color .2s linear
+
+      +small
+        display: none
+
+      &:hover
+        background-color: $clr_1
+
+        .btn__icon
+          fill: $clr_2
+
+      &__icon
+        width: 13px
+        height: 17px
+        fill: $clr_6
+        transition: fill .2s linear
 
   .menu-toggle
     position: relative
